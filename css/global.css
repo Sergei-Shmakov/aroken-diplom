@@ -18,7 +18,9 @@ html {
 	color: var(--general-text);
 	background: var(--general-bg);
 }
-.body--opened-menu,
+.body--opened-menu {
+	overflow: visible;
+}
 .body--opened-modal {
 	overflow: hidden;
 }
@@ -75,6 +77,7 @@ html {
 
 /* ============================================================================================= */
 .promo {
+	margin-top: 6vh;
 	max-height: 850px;
 	background: var(--promo-bg);
 }
@@ -127,31 +130,38 @@ html {
 	margin-top: 100px;
 }
 .play {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	top: 50%;
 	left: 40%;
-	border: 2px solid var(--general-text);
-	border-radius: 50%;
+	transition: var(--transition);
 	min-width: 50px;
 	width: 6%;
-	aspect-ratio: 1 / 1;
+	aspect-ratio: 1/1;
 	flex-shrink: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: var(--transition);
 }
 .play svg {
-	margin-left: 7%;
-	width: 50%;
-	height: 50%;
+	margin-left: 8%;
+	min-width: 20px;
+	width: 45%;
+}
+
+.play::before {
+	content: '';
+	position: absolute;
+	border: 2px solid var(--general-text);
+	border-radius: 50%;
+	inset: 0%;
+	transition: var(--transition);
 }
 
 .play:hover path {
 	fill: var(--accent-color);
 	box-shadow: 0px 0px 20px var(--accent-color);
 }
-.play:hover {
+.play:hover::before {
 	border-color: var(--accent-color);
 	box-shadow: 0px 0px 20px var(--accent-color);
 }

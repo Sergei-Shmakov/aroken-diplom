@@ -44,11 +44,6 @@
 	}
 }
 @media (max-width: 800px) {
-	.country {
-		overflow: hidden;
-		opacity: 0;
-		position: absolute;
-	}
 	.menu-nav__list {
 		grid-template-columns: repeat(2, auto);
 		justify-content: stretch;
@@ -72,10 +67,32 @@
 		font-size: 30px;
 	}
 	.promo__subtitle {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 @media (max-width: 700px) {
+	.language-selector,
+	.header__number {
+		overflow: hidden;
+		opacity: 0;
+		position: absolute;
+	}
+	.language-selector__menu,
+	.menu__number {
+		overflow: visible;
+		opacity: 1;
+		position: relative;
+	}
+	.menu-nav__list {
+		grid-template-columns: repeat(1, auto);
+	}
+	.header__logo {
+		padding-left: 0%;
+		padding-right: 10%;
+	}
+	/* =================================================================== */
+
+	/* =================================================================== */
 	.promo__inner {
 		grid-template-columns: 1fr;
 	}
@@ -113,9 +130,6 @@
 		opacity: 0;
 		position: absolute;
 	}
-	.header__logo {
-		padding-right: 50px;
-	}
 	/* ========================================================================== */
 
 	/* ========================================================================== */
@@ -141,17 +155,15 @@
 	}
 }
 @media (max-width: 500px) {
-	.header__logo {
-		padding-right: 20px;
-	}
 	.header__inner {
 		gap: 10px;
 	}
 	.theme-mode {
 		margin: 0 10px;
 	}
-	.menu-nav__list {
-		grid-template-columns: repeat(1, auto);
+
+	.menu-nav {
+		padding: 30px 40px;
 	}
 	/* ========================================================================== */
 
@@ -171,9 +183,6 @@
 		height: 20px;
 		margin-left: 3px;
 	}
-	.header__logo {
-		padding-right: 0;
-	}
 	.header__inner {
 		transform: scale(0.9);
 		margin: 0 -15px;
@@ -184,9 +193,18 @@
 	.right-group {
 		margin-right: -20px;
 	}
+	.header__logo {
+		padding-left: 0%;
+		padding-right: 5%;
+	}
 	/* ========================================================================== */
 
 	/* ========================================================================== */
+	.promo,
+	.promo-video {
+		text-align: center;
+	}
+
 	.promo__title {
 		font-size: 24px;
 	}
