@@ -39,11 +39,11 @@
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.promo__inner {
-		max-height: 65vh;
+		height: 70vw;
 	}
 	.promo-video__video img,
 	.promo__img img {
-		max-width: 40vmax;
+		max-width: 50vw;
 	}
 	.promo__title {
 		font-size: 40px;
@@ -85,9 +85,6 @@
 	}
 
 	/* ========================================================================== */
-	.promo__img img {
-		max-width: 40vmax;
-	}
 
 	.promo-video__inner {
 		max-height: 50vh;
@@ -219,17 +216,18 @@
 	/* =================================================================== */
 	.promo__inner {
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(2, 1fr);
-		max-height: 80vmax;
+		/* grid-template-rows: repeat(2, 1fr); */
 		justify-items: center;
 		text-align: center;
+		height: auto;
+		max-height: 60vh;
 	}
 	.promo__img {
 		justify-self: center;
 		align-self: center;
 	}
 	.promo__img img {
-		max-width: 33vmax;
+		position: relative;
 	}
 	.promo-video__text {
 		grid-row: 1 / 2;
@@ -375,15 +373,6 @@
 	.promo,
 	.promo-video {
 		text-align: center;
-	}
-	.promo__inner {
-		height: 80vmax;
-	}
-	.promo__img img {
-		max-width: 28.5vmax;
-	}
-	.promo-video__video img {
-		max-width: 32vmax;
 	}
 	.promo__title {
 		font-size: 24px;
