@@ -25,6 +25,7 @@
 
 .burger-icon {
 	transition: var(--transition);
+	background: var(--general-text);
 }
 
 .burger-icon:hover path {
