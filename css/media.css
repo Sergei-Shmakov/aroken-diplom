@@ -1,5 +1,5 @@
 @media (max-width: 1300px) {
-	.detailed {
+	.button {
 		font-size: 24px;
 		max-width: 18vw;
 		min-width: 140px;
@@ -67,9 +67,36 @@
 	.advantages-list__item {
 		padding-top: 2vw;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback {
+		padding: 8vw 0;
+	}
+	.feedback__inner {
+		gap: 2.5vw;
+	}
+	.feedback__legend {
+		font-size: 36px;
+		padding-bottom: 6vw;
+	}
+	.feedback__button {
+		font-size: 22px;
+		margin-top: 5vw;
+	}
+	.checkbox {
+		min-width: 28px;
+		min-height: 28px;
+		margin-right: 1vw;
+	}
+	.feedback__input {
+		padding-bottom: 0.875vw;
+	}
+	.feedback__checkbox {
+		padding-top: 2vw;
+	}
 }
 @media (max-width: 1100px) {
-	.detailed {
+	.button {
 		font-size: 22px;
 	}
 	/* ================================================================================ */
@@ -123,10 +150,31 @@
 	.airwrap__subitle {
 		font-size: 16px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback__legend {
+		font-size: 32px;
+	}
+	.feedback__input::placeholder {
+		font-size: 16px;
+	}
+	.feedback__button {
+		font-size: 20px;
+	}
+	.feedback__checkbox span {
+		font-size: 14px;
+	}
+	.checkbox {
+		min-width: 26px;
+		min-height: 26px;
+	}
+	.feedback__checkbox {
+		padding-top: 2.5vw;
+	}
 }
 
 @media (max-width: 1000px) {
-	.detailed {
+	.button {
 		font-size: 20px;
 	}
 	/* ================================================================================ */
@@ -190,9 +238,24 @@
 	.airwrap__subitle {
 		font-size: 16px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback__legend {
+		font-size: 28px;
+	}
+	.feedback__button {
+		font-size: 18px;
+	}
+	.checkbox {
+		min-width: 24px;
+		min-height: 24px;
+	}
+	.feedback__checkbox {
+		padding-top: 2.7vw;
+	}
 }
 @media (max-width: 900px) {
-	.detailed {
+	.button {
 		font-size: 18px;
 	}
 	/* ================================================================================ */
@@ -233,9 +296,27 @@
 		max-width: 60px;
 		max-height: 60px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback__legend {
+		font-size: 24px;
+	}
+	.feedback__input::placeholder {
+		font-size: 14px;
+	}
+	.feedback__checkbox span {
+		font-size: 12px;
+	}
+	.checkbox {
+		min-width: 22px;
+		min-height: 22px;
+	}
+	.feedback__checkbox {
+		padding-top: 3.2vw;
+	}
 }
 @media (max-width: 800px) {
-	.detailed {
+	.button {
 		font-size: 16px;
 	}
 	/* ================================================================================ */
@@ -303,6 +384,29 @@
 	.advantages-list__item svg {
 		max-width: 50px;
 		max-height: 50px;
+	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback__legend {
+		font-size: 20px;
+	}
+	.feedback__input::placeholder {
+		font-size: 12px;
+	}
+	.feedback__button {
+		font-size: 14px;
+		margin-top: 2vw;
+		max-height: 36px;
+	}
+	.feedback__checkbox span {
+		font-size: 10px;
+	}
+	.checkbox {
+		min-width: 20px;
+		min-height: 20px;
+	}
+	.feedback__checkbox {
+		padding-top: 4.4vw;
 	}
 }
 @media (max-width: 700px) {
@@ -432,6 +536,17 @@
 		max-width: 70px;
 		max-height: 70px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.feedback__inner {
+		grid-template-columns: 1fr;
+		gap: 12vw;
+		padding: 0 15vw;
+	}
+
+	.feedback__checkbox {
+		align-items: center;
+	}
 }
 @media (max-width: 600px) {
 	.header__number {
@@ -537,6 +652,15 @@
 	.item__subtitle {
 		font-size: 12px;
 	}
+	/* =============================================================================== */
+	/* =============================================================================== */
+	.feedback__inner {
+		padding: 0 10vw;
+	}
+	.feedback__button {
+		min-width: 170px;
+		margin-top: 0;
+	}
 }
 @media (max-width: 400px) {
 	.theme-mode {
@@ -583,5 +707,10 @@
 	}
 	.advantages-list__item {
 		height: 40vw;
+	}
+	/* =============================================================================== */
+	/* =============================================================================== */
+	.feedback__inner {
+		padding: 0 0;
 	}
 }

@@ -18,6 +18,9 @@ html {
 	color: var(--general-text);
 	background: var(--general-bg);
 }
+.body::selection {
+	background-color: var(--accent-color);
+}
 .body--opened-menu {
 	overflow: visible;
 }
@@ -75,7 +78,7 @@ html {
 	text-shadow: 0px 0px 20px var(--accent-color);
 }
 
-.detailed {
+.button {
 	font-size: 24px;
 	font-weight: 400;
 	display: flex;
@@ -90,7 +93,7 @@ html {
 	background: #4d57c8;
 	transition: var(--transition);
 }
-.detailed:hover {
+.button:hover {
 	box-shadow: 0px 0px 20px #4d57c8;
 }
 

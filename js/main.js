@@ -73,4 +73,46 @@
 			}
 		})
 	}
+
+	//button active
+
+	document.addEventListener('DOMContentLoaded', function () {
+		function checkRequiredFields(form) {
+			const requiredInputs = form.querySelectorAll('input[required]')
+			let allFilled = true
+			requiredInputs.forEach(input => {
+				if (!input.value.trim()) {
+					allFilled = false
+				}
+			})
+			return allFilled
+		}
+		function updateSubmitButton(form) {
+			const submitButton = form.querySelector('button[type="submit"]')
+			if (!submitButton) return
+			const isFormValid = checkRequiredFields(form)
+			if (isFormValid) {
+				submitButton.classList.add('feedback__button--active')
+				submitButton.disabled = false
+			} else {
+				submitButton.classList.remove('feedback__button--active')
+				submitButton.disabled = true
+			}
+		}
+		document.addEventListener('click', function (event) {
+			const contactForm = event.target.closest('.form, form')
+			if (contactForm) {
+				const requiredInputs = contactForm.querySelectorAll('input[required]')
+				requiredInputs.forEach(input => {
+					input.addEventListener('input', function () {
+						updateSubmitButton(contactForm)
+					})
+				})
+				updateSubmitButton(contactForm)
+			}
+		})
+		document.querySelectorAll('.form, form').forEach(form => {
+			updateSubmitButton(form)
+		})
+	})
 })()
