@@ -147,4 +147,24 @@
 			}
 		})
 	})
+
+	const container = document.querySelector('.news-list')
+	const button = document.querySelector('.show__more')
+
+	button.addEventListener('click', function () {
+		if (container.classList.contains('news-list--closed')) {
+			container.classList.remove('news-list--closed')
+			button.classList.add('show__more--close')
+		} else {
+			container.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
+
+			setTimeout(() => {
+				container.classList.add('news-list--closed')
+				button.classList.remove('show__more--close')
+			}, 1)
+		}
+	})
 })()
