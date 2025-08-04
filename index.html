@@ -3,1078 +3,1311 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Интернет магазин техники Dyson" />
-		<link
-			rel="shortcut icon"
-			href="./img/logo/main-logo.webp"
-			type="image/x-icon"
-		/>
+		<link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+		<title>Wake & Bake</title>
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<title>Dyson</title>
 	</head>
 	<body class="body">
-		<h1 class="hidden">Dyson</h1>
 		<div class="wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header__inner">
-						<div class="left-group">
-							<button class="burger-icon">
-								<svg
-									width="50"
-									height="50"
-									viewBox="0 0 50 50"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M10.417 14.582H39.5837"
-										stroke="white"
-										stroke-width="2.58934"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M10.417 25H39.5837"
-										stroke="white"
-										stroke-width="2.58934"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M10.417 35.416H39.5837"
-										stroke="white"
-										stroke-width="2.58934"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
-							</button>
-							<button class="theme-mode">
-								<div class="theme__pointer"></div>
-							</button>
-						</div>
-						<a class="logo header__logo" href="#">
-							<img src="./img/logo/logo.png" alt="Логотип компании Dyson" />
-						</a>
-						<footer class="right-group">
-							<a class="number header__number" href="tel:+79998004554"
-								>+7 (999) 800-45-54</a
-							>
-							<div class="language-selector">
-								<div class="selected__language">
-									<img src="./img/svg/flags/ru.svg" alt="Русский язык" />
-									<span class="language-code">ru</span>
-								</div>
-								<ul class="language__list">
-									<li class="en">
-										<img src="./img/svg/flags/gb.svg" alt="" Английский язык />
-										<span>en</span>
+			<header class="header header__hero">
+				<div class="header__top">
+					<div class="container">
+						<div class="header__top--inner">
+							<a class="header-logo" href="/"
+								><img
+									src="./img/icons/logos/logo-dark.svg"
+									alt="Логотип компании"
+							/></a>
+							<nav class="nav">
+								<ul class="nav__list">
+									<li class="nav__item">
+										<a class="nav__link" href="#program">Программа обучения</a>
 									</li>
-									<li class="de">
-										<img src="./img/svg/flags/de.svg" alt="Немецкий язык" />
-										<span>de</span>
+									<li class="nav__item">
+										<a class="nav__link" href="#gallery">Галерея</a>
 									</li>
-									<li class="fr">
-										<img src="./img/svg/flags/fr.svg" alt="Французский язык" />
-										<span>fr</span>
+									<li class="nav__item">
+										<a class="nav__link" href="#testimonials">Отзывы</a>
 									</li>
-									<li class="ru">
-										<img src="./img/svg/flags/ru.svg" alt="Русский язык" />
-										<span>ru</span>
+									<li class="nav__item">
+										<a class="nav__link" href="#contact">Контакты</a>
 									</li>
 								</ul>
-							</div>
-							<button class="busket">
-								<svg
-									width="48"
-									height="48"
-									viewBox="0 0 48 48"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M10.5 19.5C10.5 17.8431 11.8431 16.5 13.5 16.5H34.5C36.1569 16.5 37.5 17.8431 37.5 19.5V36C37.5 37.6569 36.1569 39 34.5 39H13.5C11.8431 39 10.5 37.6569 10.5 36V19.5Z"
-										stroke="white"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M18 21V15C18 11.6863 20.6863 9 24 9C27.3137 9 30 11.6863 30 15V20.5332"
-										stroke="white"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</svg>
-								<div class="item-point">
-									<p class="item__count">1</p>
-								</div>
-							</button>
-						</footer>
+							</nav>
+							<a class="burger-icon" href="#">
+								<span></span>
+							</a>
+						</div>
 					</div>
 				</div>
-				<section class="opened-menu">
+				<section class="hero-section">
 					<div class="container">
-						<nav class="menu-nav">
-							<ul class="menu-nav__list">
-								<li class="menu-nav__item">
-									<a class="nav__link list__item" href="#">Dyson Supersonic</a>
-								</li>
-								<li class="menu-nav__item list__item">
-									<a class="nav__link" href="#">Dyson Airwrap</a>
-								</li>
-								<li class="menu-nav__item list__item">
-									<a class="nav__link" href="#">Доставка и оплата</a>
-								</li>
-								<li class="menu-nav__item list__item">
-									<a class="nav__link" href="#">Сервис</a>
-								</li>
-								<li class="menu-nav__item list__item">
-									<a class="nav__link" href="#">Сертификаты</a>
-								</li>
-								<li class="menu-nav__item list__item">
-									<a class="nav__link" href="#">Контакты</a>
-								</li>
-								<li class="menu-nav__item">
-									<a class="number menu__number" href="tel:+79998004554"
-										>+7 (999) 800-45-54</a
+						<div class="hero__inner">
+							<div class="hero__content">
+								<div class="hero__subtitle">
+									<span>Старт</span>
+									<span>26.06.2023</span>
+								</div>
+								<h1 class="hero__title title">
+									Научись печь торты и десерты с нуля
+								</h1>
+								<p class="hero__text">
+									За 8 практических занятий ты получишь новые возможности для
+									самореализации и любимое дело
+								</p>
+								<div class="hero__img-control hero__img-control--mobile">
+									<a
+										class="hero__img-button"
+										data-fslightbox="gallery"
+										href="/media/cake.mp4"
 									>
-									<div class="language-selector language-selector__menu">
-										<div class="selected__language__menu selected__language">
-											<img src="./img/svg/flags/ru.svg" alt="Русский язык" />
-											<span class="language-code">ru</span>
-										</div>
-										<ul class="language__list__menu language__list">
-											<li class="en">
-												<img
-													src="./img/svg/flags/gb.svg"
-													alt=""
-													Английский
-													язык
-												/>
-												<span>en</span>
-											</li>
-											<li class="de">
-												<img src="./img/svg/flags/de.svg" alt="Немецкий язык" />
-												<span>de</span>
-											</li>
-											<li class="fr">
-												<img
-													src="./img/svg/flags/fr.svg"
-													alt="Французский язык"
-												/>
-												<span>fr</span>
-											</li>
-											<li class="ru">
-												<img src="./img/svg/flags/ru.svg" alt="Русский язык" />
-												<span>ru</span>
-											</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
+										<img src="./img/icons/play.svg" alt="" />
+									</a>
+									Посмотри, как готовятся наши торты
+								</div>
+								<a class="button hero__button" href="#contact"
+									>Записаться на курс</a
+								>
+							</div>
+							<div class="hero__img">
+								<img
+									src="./img/content/girl.png"
+									alt="Девушка с тортом в руках"
+								/>
+								<div class="hero__img-control">
+									<a
+										class="hero__img-button"
+										data-fslightbox="gallery1"
+										href="/media/cake.mp4"
+									>
+										<img src="./img/icons/play.svg" alt="" />
+									</a>
+									Посмотри, как готовятся наши торты
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</header>
-			<section class="promo">
-				<div class="container">
-					<div class="promo__inner">
-						<hgroup class="promo__text">
-							<h2 class="promo__title">
-								Создание локонов и волн.<br />Разглаживание.<br />Высушивание
-								волос.<br />Без экстремальных температур
-							</h2>
-							<p class="promo__subtitle">
-								Стайлер Dyson Airwrap™ имеет цилиндрические насадки для<br />создания
-								локонов или волн, а также щетки для разглаживания<br />и
-								придания объема. Подберите насадки индивидуально<br />в
-								зависимости от своего типа волос и желаемой укладки<br />или
-								выберите один из наших комплектов.
-							</p>
-						</hgroup>
-						<div class="promo__img">
-							<img
-								src="./img/foto/promo-1.png"
-								alt="Девушка создает идеальные локоны и волны с помощью стайлера Dyson Airwrap"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="sale">
-				<div class="container">
-					<div class="sale__inner">
-						<div class="group-text">
-							<div class="text__inner">
-								<hgroup>
-									<a class="logo sale__logo" href="#">
-										<img
-											src="./img/logo/logo.png"
-											alt="Логотип компании Dyson"
-										/>
+			<main class="main">
+				<section class="about main__about">
+					<div class="container">
+						<div class="about__inner">
+							<div class="about__img">
+								<img
+									src="./img/content/girl-2.jpg"
+									alt="Девушка с тортом в руках"
+								/>
+								<div class="about__img-control">
+									<a class="about__img-button" href="#">
+										<img src="./img/icons/gift.svg" alt="" />
 									</a>
-									<small class="subitle"
-										>Технологии для ухода за волосами</small
-									>
-								</hgroup>
-								<h2 class="sale__title">
-									До конца февраля <br />
-									<b>СКИДКА <mark>10%</mark></b>
-								</h2>
-								<button class="button">
-									<a href="#"> Подробнее </a>
-								</button>
+									<p>Нажми на подарок, чтобы получить наш фирменный рецепт</p>
+								</div>
 							</div>
-						</div>
-						<div class="group-img">
-							<div class="group-img__inner">
-								<img
-									class="img__bag"
-									src="./img/sale/bag.png"
-									alt="Cумка для хранения Dyson airwrap"
-								/>
-								<img
-									class="img__complect"
-									src="./img/sale/Group2.png"
-									alt="Полный комплект Dyson airwrap"
-								/>
+							<div class="about__content">
+								<div class="about__heading">
+									<h2 class="about__title title">Наша школа —</h2>
+									<p class="about__title-text">
+										это уютный дом для начинающих кондитеров
+									</p>
+								</div>
+								<p class="about__text">
+									С нами ты погрузишься в удивительный мир кондитерского
+									искусства, получишь новые знания и профессиональные навыки!
+									Обретёшь веру в свои силы, научишься приготовлению
+									разнообразных современных и классических десертов
+								</p>
 							</div>
+							<ul class="about__grid">
+								<li class="about__grid-item">
+									<div class="about__grid-img">
+										<img src="./img/icons/hat-2.svg" alt="" />
+									</div>
+									<p class="about__grid-text">
+										Живое общение с наставниками и одногруппниками
+									</p>
+								</li>
+								<li class="about__grid-item">
+									<div class="about__grid-img">
+										<img src="./img/icons/hat-2.svg" alt="" />
+									</div>
+									<p class="about__grid-text">
+										Предоставление всех необходимых материалов
+									</p>
+								</li>
+								<li class="about__grid-item">
+									<div class="about__grid-img">
+										<img src="./img/icons/hat-2.svg" alt="" />
+									</div>
+									<p class="about__grid-text">Небольшие группы до 6 человек</p>
+								</li>
+								<li class="about__grid-item">
+									<div class="about__grid-img">
+										<img src="./img/icons/hat-2.svg" alt="" />
+									</div>
+									<p class="about__grid-text">Большие аудитории для обучения</p>
+								</li>
+							</ul>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section class="promo-video">
-				<div class="container">
-					<div class="promo-video__inner promo__inner">
-						<div class="promo-video__video">
-							<img
-								src="./img/foto/promo-3.png"
-								alt="Девушка создает идеальные локоны с помощью эффекта Коанда и стайлера Dyson Airwrap"
-							/>
-						</div>
-						<hgroup class="promo-video__text">
-							<h2 class="promo-video__title promo__title">
-								Как сделать локоны с помощью эффекта Коанда
-							</h2>
-							<p class="promo-video__subtitle promo__subtitle">
-								Используя сочетание содержащейся в волосах влаги с мощным
-								воздушным потоком и контролируемым нагревом, стайлер Dyson
-								Airwrap™ позволяет сушить и укладывать волосы одновременно. Без
-								экстремальных температур.
+				</section>
+				<section class="program main__program" id="program">
+					<div class="container">
+						<h2 class="program__title title">Программа обучения</h2>
+						<div class="program__top">
+							<p class="program__text">
+								Продолжительность курса — 4 недели
+								<br />
+								Программа обучения состоит из 8 модулей
+								<br />
+								На каждое занятие отводится по 6 часов
 							</p>
-						</hgroup>
-						<a
-							class="play"
-							href="https://www.youtube.com/watch?v=zypEMfa_kDM"
-							target="parent"
-						>
-							<svg
-								width="33"
-								height="38"
-								viewBox="0 0 33 38"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M32 17.268C33.3333 18.0378 33.3333 19.9623 32 20.7321L3.5 37.1865C2.16667 37.9563 0.500002 36.9941 0.500002 35.4545L0.500004 2.54552C0.500004 1.00592 2.16667 0.0436645 3.5 0.813465L32 17.268Z"
-									fill="#111111"
-								/>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</section>
-			<section class="advantages">
-				<div class="container">
-					<h2 class="advantages__title">Почему выбирают нас</h2>
-					<ul class="advantages-list">
-						<li class="advantages-list__item">
-							<svg
-								width="74"
-								height="80"
-								viewBox="0 0 74 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M0 1.48649C0 0.665523 0.665523 0 1.48649 0H11.0056C11.7171 0 12.3287 0.504066 12.4647 1.20237L15.5479 17.036H72.514C73.335 17.036 74.0005 17.7015 74.0005 18.5225V29.6329V40.0026V50.3723C74.0005 51.1933 73.335 51.8588 72.514 51.8588H20.5248H12.4921V64.4404H72.514C73.335 64.4404 74.0005 65.1059 74.0005 65.9269C74.0005 66.7478 73.335 67.4134 72.514 67.4134H62.3712C63.663 68.7489 64.4593 70.5769 64.4593 72.593C64.4593 76.6838 61.181 80 57.1369 80C53.0928 80 49.8145 76.6838 49.8145 72.593C49.8145 70.5769 50.6108 68.7489 51.9026 67.4134H33.0809C34.3728 68.7489 35.1691 70.5769 35.1691 72.593C35.1691 76.6838 31.8907 80 27.8466 80C23.8026 80 20.5242 76.6838 20.5242 72.593C20.5242 70.5769 21.3205 68.7489 22.6124 67.4134H11.0056C10.1847 67.4134 9.51916 66.7478 9.51916 65.9269V50.3723C9.51916 49.5513 10.1847 48.8858 11.0056 48.8858H18.7209L17.0465 40.2867L15.0273 29.917L12.8638 18.8066L9.78069 2.97297H1.48649C0.665523 2.97297 0 2.30745 0 1.48649ZM21.7498 48.8858H71.0275V41.4891H20.3094L21.7498 48.8858ZM19.7305 38.5161H71.0275V31.1194H18.2902L19.7305 38.5161ZM17.7113 28.1464H71.0275V20.0089H16.1268L17.7113 28.1464ZM27.8466 77.027C30.2167 77.027 32.1961 75.0741 32.1961 72.593C32.1961 70.112 30.2167 68.1591 27.8466 68.1591C25.4766 68.1591 23.4972 70.112 23.4972 72.593C23.4972 75.0741 25.4766 77.027 27.8466 77.027ZM61.4864 72.593C61.4864 75.0741 59.507 77.027 57.1369 77.027C54.7668 77.027 52.7874 75.0741 52.7874 72.593C52.7874 70.112 54.7668 68.1591 57.1369 68.1591C59.507 68.1591 61.4864 70.112 61.4864 72.593Z"
-									fill="#C5358C"
-								/>
-							</svg>
-							<hgroup>
-								<h3 class="item__title">Широкий ассортимент</h3>
-								<small class="item__subtitle"
-									>Большой выбор техники<br />и аксессуаров</small
-								>
-							</hgroup>
-						</li>
-						<li class="advantages-list__item">
-							<svg
-								width="79"
-								height="56"
-								viewBox="0 0 79 56"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M0 1.48649C0 0.665523 0.665523 0 1.48649 0H17.7247H36.9158H52.4167C53.2376 0 53.9031 0.665523 53.9031 1.48649V8.84002H66.4412C67.0807 8.84002 67.6486 9.24903 67.8512 9.85561L72.6788 24.3102H77.513C78.334 24.3102 78.9995 24.9757 78.9995 25.7966V45.6868C78.9995 46.5078 78.334 47.1733 77.513 47.1733H75.1921C74.4702 52.165 70.1664 56.0004 64.965 56.0004C59.5105 56.0004 55.043 51.7826 54.6582 46.4366H52.4311L52.4167 46.4367H30.984C30.5992 51.7826 26.1317 56.0004 20.6772 56.0004C15.2228 56.0004 10.7553 51.7826 10.3705 46.4367H1.48649C0.665523 46.4367 0 45.7712 0 44.9502V1.48649ZM54.872 43.4637C55.8907 38.8364 60.0226 35.3735 64.965 35.3735C70.1663 35.3735 74.4701 39.2088 75.1921 44.2003H76.0265V27.2831H71.6081H53.9035V43.4637H54.872ZM50.9302 43.4637H30.7702C29.7516 38.8364 25.6196 35.3735 20.6772 35.3735C15.7349 35.3735 11.6029 38.8364 10.5843 43.4637H2.97297V2.97297H16.2382V16.22C16.2382 16.7429 16.5131 17.2275 16.9619 17.4958C17.4108 17.7642 17.9677 17.7769 18.4284 17.5293L27.3203 12.7508L36.2121 17.5293C36.6728 17.7769 37.2297 17.7642 37.6786 17.4958C38.1274 17.2275 38.4023 16.7429 38.4023 16.22V2.97297H50.9302V43.4637ZM53.9031 24.3102H69.5444L65.3705 11.813H53.9031V24.3102ZM19.2112 2.97297H35.4293V13.7336L28.0239 9.75386C27.5845 9.51772 27.056 9.51772 26.6166 9.75386L19.2112 13.7336V2.97297ZM31.0012 26.5332C31.0012 25.7123 31.6667 25.0468 32.4877 25.0468H42.8214C43.6423 25.0468 44.3078 25.7123 44.3078 26.5332C44.3078 27.3542 43.6423 28.0197 42.8214 28.0197H32.4877C31.6667 28.0197 31.0012 27.3542 31.0012 26.5332ZM35.4402 33.887C34.6192 33.887 33.9537 34.5525 33.9537 35.3735C33.9537 36.1945 34.6192 36.86 35.4402 36.86H42.8206C43.6415 36.86 44.3071 36.1945 44.3071 35.3735C44.3071 34.5525 43.6415 33.887 42.8206 33.887H35.4402ZM20.6772 53.0274C24.7479 53.0274 28.0379 49.7355 28.0379 45.6869C28.0379 41.6384 24.7479 38.3465 20.6772 38.3465C16.6066 38.3465 13.3166 41.6384 13.3166 45.6869C13.3166 49.7355 16.6066 53.0274 20.6772 53.0274ZM72.3257 45.6869C72.3257 49.7355 69.0357 53.0274 64.965 53.0274C60.8943 53.0274 57.6043 49.7355 57.6043 45.6869C57.6043 41.6384 60.8943 38.3465 64.965 38.3465C69.0357 38.3465 72.3257 41.6384 72.3257 45.6869Z"
-									fill="#C5358C"
-								/>
-							</svg>
-							<hgroup>
-								<h3 class="item__title">Быстрая доставка</h3>
-								<small class="item__subtitle"
-									>По Москве — 2-3 часа;<br />По России — 2-4 дня</small
-								>
-							</hgroup>
-						</li>
-						<li class="advantages-list__item">
-							<svg
-								width="80"
-								height="55"
-								viewBox="0 0 80 55"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									opacity="0.9"
-									d="M32.7907 2H2V53H32.7907M32.7907 2H78V53H32.7907M32.7907 2V53M9.62791 27.3591H24.3256M9.62791 38.7238H24.3256M9.62791 15.6188H24.3256M63.0251 12.4254L48.4186 41.0718M70.1861 35.5304C70.1861 39.0577 67.3956 41.9171 63.9535 41.9171C60.5113 41.9171 57.7209 39.0577 57.7209 35.5304C57.7209 32.0031 60.5113 29.1436 63.9535 29.1436C67.3956 29.1436 70.1861 32.0031 70.1861 35.5304ZM53.4419 18.2486C53.4419 21.7759 50.6515 24.6354 47.2093 24.6354C43.7672 24.6354 40.9767 21.7759 40.9767 18.2486C40.9767 14.7213 43.7672 11.8619 47.2093 11.8619C50.6515 11.8619 53.4419 14.7213 53.4419 18.2486Z"
-									stroke="#C5358C"
-									stroke-width="3"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-
-							<hgroup>
-								<h3 class="item__title">Специальное предложение</h3>
-								<small class="item__subtitle"
-									>Только для клиентов<br />нашего сайта</small
-								>
-							</hgroup>
-						</li>
-						<li class="advantages-list__item">
-							<svg
-								width="78"
-								height="80"
-								viewBox="0 0 78 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M59.5761 46.3411V78H2V36.4098H42.0449H43.3367M59.5761 46.3411L76 37.8086V9.36687C76 9.36687 73.6304 7.69294 72.3538 6.1047C71.1216 4.57176 69.9102 2 69.9102 2H49.288C49.288 2 48.6618 4.56592 47.4629 6.1047C46.2103 7.71236 43.3367 9.36687 43.3367 9.36687V36.4098M59.5761 46.3411L43.3367 36.4098M54.9626 23.0748L58.2843 26.0589L65.4813 19.9975M10.3965 44.4294H21.6534V55.6196H10.3965V44.4294ZM9.28928 64.5718H15.1945V69.0479H9.28928V64.5718ZM46.3815 64.5718H52.2868V69.0479H46.3815V64.5718ZM34.0175 64.5718H39.9227V69.0479H34.0175V64.5718ZM21.6534 64.5718H27.5586V69.0479H21.6534V64.5718Z"
-									stroke="#C5358C"
-									stroke-width="3"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-
-							<hgroup>
-								<h3 class="item__title">Гарантия производителя</h3>
-								<small class="item__subtitle"
-									>Гарантия 2 года<br />на устройства и аксессуары</small
-								>
-							</hgroup>
-						</li>
-						<li class="advantages-list__item">
-							<svg
-								width="80"
-								height="80"
-								viewBox="0 0 80 80"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M1.48649 0C0.665523 0 0 0.665523 0 1.48649V57.7793C0 58.6002 0.665523 59.2657 1.48649 59.2657H35.9741V57.9869C36.0846 70.1634 45.8976 80 57.9866 80C70.1442 80 80 70.0514 80 57.7791C80 45.5301 70.1815 35.596 58.0556 35.5584H60.2078V1.48649C60.2078 0.665523 59.5423 0 58.7213 0H1.48649ZM57.9176 35.5584H57.2348V2.97297H40.3954V16.3004C40.3954 16.8337 40.1097 17.3262 39.6467 17.5909C39.1836 17.8556 38.6143 17.8519 38.1547 17.5813L30.0743 12.8233L21.2743 17.6064C20.8137 17.8567 20.2553 17.846 19.8047 17.578C19.3541 17.3101 19.078 16.8246 19.078 16.3004V2.97297H2.97297V56.2928H35.9741V57.5714C36.0844 45.418 45.8603 35.5958 57.9176 35.5584ZM22.0509 13.8005V2.97297H37.4225V13.7L30.8578 9.83458C30.408 9.56974 29.8523 9.56021 29.3937 9.80947L22.0509 13.8005ZM10.2914 31.1091C9.47041 31.1091 8.80489 31.7746 8.80489 32.5956C8.80489 33.4166 9.47041 34.0821 10.2914 34.0821H26.4355C27.2565 34.0821 27.922 33.4166 27.922 32.5956C27.922 31.7746 27.2565 31.1091 26.4355 31.1091H10.2914ZM67.0323 54.4592C67.6531 53.922 67.7209 52.9832 67.1838 52.3624C66.6466 51.7416 65.7079 51.6737 65.087 52.2109L56.0244 60.0521L52.5764 55.4115C52.0867 54.7525 51.1556 54.6152 50.4966 55.1048C49.8377 55.5944 49.7004 56.5255 50.19 57.1845L54.5929 63.1105C54.8395 63.4423 55.2131 63.6565 55.624 63.7015C56.0349 63.7466 56.4461 63.6185 56.7587 63.348L67.0323 54.4592ZM8.80489 44.4467C8.80489 43.6257 9.47041 42.9602 10.2914 42.9602H22.0326C22.8535 42.9602 23.519 43.6257 23.519 44.4467C23.519 45.2676 22.8535 45.9332 22.0326 45.9332H10.2914C9.47041 45.9332 8.80489 45.2676 8.80489 44.4467ZM77.0649 57.7791C77.0649 68.4151 68.5232 77.0372 57.9866 77.0372C47.4499 77.0372 38.9083 68.4151 38.9083 57.7791C38.9083 47.1432 47.4499 38.5211 57.9866 38.5211C68.5232 38.5211 77.0649 47.1432 77.0649 57.7791Z"
-									fill="#C5358C"
-								/>
-							</svg>
-
-							<hgroup>
-								<h3 class="item__title">Безопасная оплата</h3>
-								<small class="item__subtitle"
-									>Оплата после получения товара</small
-								>
-							</hgroup>
-						</li>
-						<li class="advantages-list__item">
-							<svg
-								width="52"
-								height="77"
-								viewBox="0 0 52 77"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M1.5 0C0.671573 0 0 0.671573 0 1.5V75.5C0 76.3284 0.671573 77 1.5 77H50.5C51.3284 77 52 76.3284 52 75.5V57.37V1.5C52 0.671573 51.3284 0 50.5 0H26H1.5ZM49 3V55.87H3V3H26H49ZM49 74V58.87H3V74H49ZM19.9664 65.86C19.138 65.86 18.4664 66.5316 18.4664 67.36C18.4664 68.1884 19.138 68.86 19.9664 68.86H30.2052C31.0337 68.86 31.7052 68.1884 31.7052 67.36C31.7052 66.5316 31.0337 65.86 30.2052 65.86H19.9664ZM14.9487 16.9535C15.2426 16.6678 15.65 16.5 16.0833 16.5H21.2451L23.4491 21.8568L20.7234 23.4468C20.0373 23.847 19.7821 24.7127 20.1414 25.4211C21.9446 28.9757 24.8991 31.844 28.539 33.5892C29.2307 33.9209 30.0611 33.6772 30.464 33.0245L32.1205 30.3403L37.7083 32.5134V37.4826C37.7083 37.866 37.5521 38.2425 37.2596 38.5268C36.9743 38.8042 36.5821 38.9704 36.1629 38.9799C30.522 38.6346 25.2111 36.3005 21.2249 32.425C17.2411 28.5518 14.8548 23.4071 14.5005 17.9585C14.5108 17.5887 14.6662 17.2281 14.9487 16.9535ZM16.0833 13.5C14.8812 13.5 13.72 13.9639 12.8575 14.8025C11.9935 15.6425 11.5 16.791 11.5 17.9977C11.5 18.0289 11.501 18.0601 11.5029 18.0913C11.892 24.3157 14.6105 30.1784 19.1337 34.576C23.6558 38.9725 29.669 41.6015 36.0365 41.9777C36.066 41.9795 36.0955 41.9803 36.125 41.9803C37.3272 41.9803 38.4883 41.5164 39.3509 40.6778C40.2149 39.8378 40.7083 38.6894 40.7083 37.4826V31.4873C40.7083 30.8686 40.3286 30.3135 39.752 30.0893L32.0437 27.0916C31.3692 26.8293 30.6036 27.086 30.2235 27.7018L28.6501 30.2514C26.5542 29.0144 24.7951 27.3128 23.515 25.2915L26.0891 23.7899C26.736 23.4126 27.0054 22.616 26.7205 21.9235L23.6372 14.4293C23.4058 13.867 22.858 13.5 22.25 13.5H16.0833Z"
-									fill="#C5358C"
-								/>
-							</svg>
-
-							<hgroup>
-								<h3 class="item__title">Бесплатная консультация</h3>
-								<small class="item__subtitle"
-									>В любом удобном для вас  формате, 7 дней в неделю</small
-								>
-							</hgroup>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="sale airwrap">
-				<div class="container">
-					<div class="sale__inner airwrap__inner">
-						<div class="group-text airwrap-group-text">
-							<div class="text__inner airwrap-text__inner">
-								<hgroup>
-									<h2 class="airwrap__title">
-										Мультистайлер Dyson Airwrap™ Complete Long
-									</h2>
-									<small class="airwrap__subitle"
-										>Технологии для ухода за волосами</small
+							<ul class="tab-controls">
+								<li class="tab-controls__item">
+									<a
+										class="tab-controls__link tab-controls__link--active"
+										href="#first-week"
 									>
-								</hgroup>
-								<h3>
-									Эксклюзивный цвет <br />
-									<b class="title__blue">Vinca blue/</b
-									><b class="title__rose">Rosén</b>
-								</h3>
-								<button class="button">
-									<a href="#"> Подробнее </a>
-								</button>
-							</div>
+										Неделя 1
+									</a>
+								</li>
+								<li class="tab-controls__item">
+									<a class="tab-controls__link" href="#second-week">
+										Неделя 2
+									</a>
+								</li>
+								<li class="tab-controls__item">
+									<a class="tab-controls__link" href="#third-week">
+										Неделя 3
+									</a>
+								</li>
+								<li class="tab-controls__item">
+									<a class="tab-controls__link" href="#fourth-week">
+										Неделя 4
+									</a>
+								</li>
+							</ul>
 						</div>
-						<div class="airwrap__img">
-							<img
-								src="./img/foto/airwrap.png"
-								alt="Девушки делают идеальную укладку с помощью Dyson Airwrap"
-							/>
+						<div
+							class="program__tab-content tab-content tab-content--show"
+							id="first-week"
+						>
+							<ul class="accordion-list">
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">
+											Начало кондитерского пути и создание первого торта
+										</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Организация рабочего места
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Подготовка необходимого инвентаря
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Выбор необходимых продуктов
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Советы по закупке необходимых продуктов и инвентаря
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Обзор хранения и заготовки сырья
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Испечёшь морковный торт с солёной карамелью
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Медовик и капкейки</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление и украшение капкейков
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Изготовление крема и конфи
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление медовых коржей для торта
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Пропитка коржей и сборка торта
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Испечёшь капкейки, приготовишь крем и конфи, а также
+													сделаешь своё первое пирожное — медовик
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-					</div>
-				</div>
-			</section>
-			<section class="special-offers">
-				<div class="container">
-					<h2 class="special-offers__title">Спецпредложения</h2>
-					<ul class="keywords-list">
-						<li class="keywords-list__item">
-							<span> dyson стайлер для длинных волос </span>
-						</li>
-						<li class="keywords-list__item">
-							<span> dyson hs01 airwrap compliete </span>
-						</li>
-						<li class="keywords-list__item">
-							<span> фен щетка дайсон </span>
-						</li>
-						<li class="keywords-list__item">
-							<span>dyson стайлер красный</span>
-						</li>
-						<li class="keywords-list__item">
-							<span>dyson стайлер красный</span>
-						</li>
-						<li class="keywords-list__item">
-							<span> dyson стайлер для длинных волос </span>
-						</li>
-						<li class="keywords-list__item">
-							<span> dyson hs01 airwrap compliete </span>
-						</li>
-						<li class="keywords-list__button">
-							<button class="keywords__full new__link">Показать еще</button>
-						</li>
-					</ul>
-					<form>
-						<select class="filter" name="filter">
-							<option value="most-popular">Сначала популярные</option>
-							<option value="most-pricey">Сначала дорогие</option>
-							<option value="most-cheap">Сначала дешевые</option>
-							<option value="in-stock">В наличии</option>
-							<option value="best-benefit">Лучшая выгода</option>
-						</select>
-					</form>
-				</div>
-			</section>
-			<section class="accordion">
-				<div class="container">
-					<h2 class="accordion-title">FAQ — Часто задаваемые вопросы</h2>
-					<ul class="accordion-list">
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									Главное отличие фена Dyson в быстром и безопасном высушивании
-									волос?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span
-									>Главное отличие фена Dyson в быстром и безопасном высушивании
-									волос. В рукоятку встроен датчик температуры, благодаря
-									которому она не поднимается выше 100 градусов. В комплекте 5
-									насадок, которые подходят для укладки и сушки на разных
-									режимах. Есть практичный черный чехол, предназначенный для
-									аккуратной перевозки и хранения. Расчески можно использовать
-									отдельно от девайса или во время сушки с целью предотвратить
-									запутывание.</span
+						<div class="program__tab-content tab-content" id="second-week">
+							<ul class="accordion-list">
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Песочное тесто и чизкейк</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление песочного теста
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Тонкости в приготовлении меренги
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Изготовление заварного крема
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Выпечка тарталеток
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление нежного чизкейка
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Приготовишь меренги, сделаешь заварной крем
+													для тарталеток и испечёшь свой первый чизкейк
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Бисквиты</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Тонкости выпечки бисквитов
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление ванильного бисквита
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление фисташкового бисквита
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление шоколадного бисквита
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Отработаешь выпечку трёх бисквитов для будущих тортов
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="program__tab-content tab-content" id="third-week">
+							<ul class="accordion-list">
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Дрожжевое тесто</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Технология приготовления дрожжевого теста: тонкости
+														и советы
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление песочного теста
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Рецептурные нюансы
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Приготовишь заготовку для торта
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Работа с кремами</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление кремов: ганаши, кремю
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Создание заварного теста
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление профитролей и нескольких видов кремов
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Приготовишь профитроли и несколько видов кремов
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="program__tab-content tab-content" id="fourth-week">
+							<ul class="accordion-list">
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Mille-feuille, или Наполеон</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление слоёного теста
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Рецептура и создание крема дипломат
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Приготовление французского морковного десерта
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Испечёте торт «Наполеон» и приготовите необычный
+													морковный десерт
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="accordion-list__item">
+									<button class="accordion-list__control" type="button">
+										<h3 class="control-title">Завершение курса</h3>
+										<div class="accordion-list__control-icon">
+											<svg
+												width="14"
+												height="14"
+												viewBox="0 0 14 14"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+													fill="#FFA55C"
+												/>
+												<path
+													d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+													fill="#FFA55C"
+												/>
+											</svg>
+										</div>
+									</button>
+
+									<div class="accordion-list__content">
+										<div class="accordion-content">
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">Теория:</h6>
+												<ul class="accordion-content__list">
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Работа кондитера на заказ
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Применение знаний о технологии выпечки к другим
+														рецептам
+													</li>
+													<li class="accordion-content__item">
+														<div class="accordion-content__icon">
+															<img src="./img/icons/hat-1.svg" alt="" />
+														</div>
+														Разработка собственных рецептов
+													</li>
+												</ul>
+											</div>
+											<div class="accordion-content__col">
+												<h6 class="accordion-content__title">практика:</h6>
+												<p class="accordion-content__text">
+													Самостоятельно, без наставника испечёте торт
+													на ваш выбор
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="program__bottom">
+							<div class="program__action">
+								<div class="program__discount">
+									Успей получить скидку
+									<div class="program__discount-value title">-30%</div>
+									<span> до 1 июня </span>
+								</div>
+								<div class="program__price">
+									<div class="program__price-text">
+										Стоимость курса без скидки
+									</div>
+									<div class="program__price-value">32 000 руб.</div>
+								</div>
+								<div class="program__price">
+									<div class="program__price-text">
+										Стоимость курса со скидкой
+									</div>
+									<div class="program__price-value program__price-value--hit">
+										22 400 руб.
+									</div>
+								</div>
+								<a class="button program__button" href="#contact"
+									>Оставить заявку</a
 								>
 							</div>
-						</li>
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									В рукоятку встроен датчик температуры, благодаря которому она
-									не поднимается выше 100 градусов?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span>
-									Да, фен Dyson контролирует температуру 40 раз в секунду,
-									предотвращая перегрев. Обычные фены могут нагреваться до
-									150°C, повреждая волосы, но Dyson поддерживает оптимальную
-									температуру (до 100°C). Это особенно важно для тонких и
-									окрашенных волос, так как снижает риск ломкости и сухости.
-								</span>
+							<div class="program__img">
+								<img src="./img/decor/cake.png" alt="" />
 							</div>
-						</li>
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									Почему фен Dyson не пересушивает кожу головы?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span>
-									Dyson использует интеллектуальную систему терморегуляции,
-									которая автоматически снижает нагрев, если датчики фиксируют
-									риск пересушивания. Кроме того, плавный воздушный поток
-									равномерно распределяет тепло, не создавая локальных
-									перегревов. Это делает сушку комфортной даже для
-									чувствительной кожи.
-								</span>
-							</div>
-						</li>
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									Правда ли, что Dyson уменьшает статику?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span>
-									Да, благодаря ионной технологии, фен нейтрализует статическое
-									электричество, делая волосы гладкими и послушными. Обычные
-									фены часто вызывают «эффект одуванчика», но Dyson подает
-									миллионы отрицательных ионов, которые «приглаживают» чешуйки
-									кутикулы, уменьшая пушистость.
-								</span>
-							</div>
-						</li>
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									Зачем нужна магнитная насадка в комплекте?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span
-									>Магнитные насадки Dyson быстро меняются одним движением и
-									надежно фиксируются. Это удобно при укладке: не нужно тратить
-									время на защелки или повороты. Например, насадка-диффузор
-									равномерно распределяет воздух для объемной сушки, а
-									концентратор создает направленный поток для гладкости.
-								</span>
-							</div>
-						</li>
-						<li class="accordion__item">
-							<hgroup class="accordion-list__control">
-								<h3 class="accordion__item-title">
-									Почему Dyson легче обычных фенов?
-								</h3>
-								<button class="accordion-plus-button">
-									<div class="accordion-plus-button__icon"></div>
-								</button>
-							</hgroup>
-							<div class="accordion__item-text">
-								<span
-									>Двигатель фена расположен в рукоятке, а не в головной части —
-									это улучшает баланс и снижает нагрузку на руку. Вес
-									распределен так, что даже при длительной сушке усталость
-									минимальна. Для сравнения: обычный фен мощностью 2000 Вт весит
-									~600 г, а Dyson — всего ~500 г.
-								</span>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="news">
-				<div class="container">
-					<h2 class="news__title">Новости</h2>
-					<ul class="news-list news-list--closed">
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-						<li class="news-list-item">
-							<img class="news-list-item__img" src="./img/new.png" alt="" />
-							<time class="new__data">21 декабря 2022</time>
-							<hgroup class="new__body">
-								<h3 class="new__title">
-									Есть ли безопасные выпрямители для волос
-								</h3>
-								<p class="new__text">
-									Добавьте объем и рельеф коротким волосам. Посмотрите, как
-									создать мягкие, легкие локоны и волны на коротких волосах и
-									волосах средней длины.
-								</p>
-							</hgroup>
-							<a
-								class="new__link"
-								target="_blank"
-								href="https://dysonsshop.ru/novosti/est-li-bezopasnye-vypryamiteli-dlya-volos/"
-								>Читать далее</a
-							>
-						</li>
-					</ul>
-					<button class="button show__more">
-						<span class="show-more__text">Показать еще</span>
-						<svg
-							width="27"
-							height="25"
-							viewBox="0 0 27 25"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M22.7031 22.722L1.22199 2.13588C0.823245 1.75375 0.809777 1.12073 1.19191 0.721988C1.57403 0.323245 2.20706 0.309777 2.6058 0.691906L24.1919 21.3786V4.44733C24.1919 3.89504 24.6396 3.44733 25.1919 3.44733C25.7442 3.44733 26.1919 3.89504 26.1919 4.44733V23.722C26.1919 24.2743 25.7442 24.722 25.1919 24.722H5.03635C4.48406 24.722 4.03635 24.2743 4.03635 23.722C4.03635 23.1697 4.48406 22.722 5.03635 22.722H22.7031Z"
-								fill="#111111"
-							/>
-						</svg>
-					</button>
-				</div>
-			</section>
-			<section class="feedback">
-				<div class="container">
-					<div class="feedback__inner">
-						<form class="feedback__name-tel form" id="form">
-							<legend class="feedback__legend">Свяжитесь с нами</legend>
-							<input
-								class="feedback__input"
-								name="username"
-								type="text"
-								placeholder="Ваше имя"
-								required
-							/>
-							<svg
-								width="555"
-								height="2"
-								viewBox="0 0 555 2"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M0 1H555" stroke="#111111" />
-							</svg>
-							<input
-								class="feedback__input"
-								name="user-phone"
-								type="tel"
-								placeholder="Ваш номер телефона"
-								required
-							/>
-							<svg
-								width="555"
-								height="2"
-								viewBox="0 0 555 2"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M0 1H555" stroke="#111111" />
-							</svg>
-							<button class="button feedback__button" type="submit" disabled>
-								Оставить заявку
-							</button>
-						</form>
-						<form class="feedback__email form" id="form">
-							<legend class="feedback__legend">Подпишитесь на новости</legend>
-							<input
-								class="feedback__input"
-								name="user-email"
-								type="email"
-								placeholder="Ваш e-mail"
-								required
-							/>
-							<svg
-								width="555"
-								height="2"
-								viewBox="0 0 555 2"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M0 1H555" stroke="#111111" />
-							</svg>
-							<button class="button feedback__button" type="submit" disabled>
-								Подписаться
-							</button>
-							<label class="feedback__checkbox">
-								<input
-									class="checkbox"
-									name="checkbox"
-									type="checkbox"
-									required
-								/>
-								<span>
-									Я ознакомлен(а) с
-									<a href="#" target="_blank"> политикой конфиденциальности </a>
-									и согласен(а) с обработкой
-									<a href="#" target="_blank"> персональных данных </a>
-								</span>
-							</label>
-						</form>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+				<section class="gallery main__gallery" id="gallery">
+					<div class="container">
+						<div class="gallery__inner">
+							<div class="gallery__img">
+								<img src="./img/decor/cupcakes.png" alt="" />
+							</div>
+							<div class="gallery__content">
+								<div class="gallery__info">
+									<h2 class="gallery__title title">Фотогалерея</h2>
+									<p class="gallery__text">
+										Для комфортного обучения сделаны просторные аудитории,
+										где предоставляется всё необходимое оборудование. Здесь наши
+										ученики создают кулинарные шедевры под присмотром опытных
+										наставников
+									</p>
+								</div>
+								<div class="galley__nav">
+									<button class="gallery__prev" type="button">
+										<svg
+											width="14"
+											height="14"
+											viewBox="0 0 14 14"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.992 1.00777L2.016 6.98377L7.992 12.9598L6.984 13.9678L-3.0528e-07 6.98377L6.984 -0.000227365L7.992 1.00777Z"
+												fill="#FFA55C"
+											/>
+											<path
+												d="M1.0083 7.70312L1.0083 6.26313L13.2483 6.26312L13.2483 7.70312L1.0083 7.70312Z"
+												fill="#FFA55C"
+											/>
+										</svg>
+									</button>
+									<div class="gallery__pagination"></div>
+									<button class="gallery__next" type="button">
+										<svg
+											width="14"
+											height="14"
+											viewBox="0 0 14 14"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+												fill="#FFA55C"
+											/>
+											<path
+												d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+												fill="#FFA55C"
+											/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="gallery__slider swiper">
+							<div class="gallery__wrapper swiper-wrapper">
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/1.jpg"
+								>
+									<img src="./img/content/gallery/1.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/2.jpg"
+								>
+									<img src="./img/content/gallery/2.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/3.jpg"
+								>
+									<img src="./img/content/gallery/3.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/4.jpg"
+								>
+									<img src="./img/content/gallery/4.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/1.jpg"
+								>
+									<img src="./img/content/gallery/1.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/2.jpg"
+								>
+									<img src="./img/content/gallery/2.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/3.jpg"
+								>
+									<img src="./img/content/gallery/3.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/4.jpg"
+								>
+									<img src="./img/content/gallery/4.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/1.jpg"
+								>
+									<img src="./img/content/gallery/1.jpg" alt="" />
+								</a>
+								<a
+									class="gallery__slide swiper-slide"
+									data-fslightbox="gallery"
+									href="./img/content/gallery/2.jpg"
+								>
+									<img src="./img/content/gallery/2.jpg" alt="" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="testimonials main__testimonials" id="testimonials">
+					<div class="container">
+						<div class="testimonials__inner">
+							<div class="testimonials__info">
+								<h2 class="testimonials__title title">
+									Обратная связь от наших учеников
+								</h2>
+								<p class="testimonials__text">
+									Все наши ученики абсолютно разные, и мы к каждому
+									из них находим индивидуальный подход. Именно поэтому
+									все остаются довольны не только кулинарными результатами,
+									но и атмосферой обучения в целом
+								</p>
+							</div>
+							<div class="testimonials__nav">
+								<button class="testimonials__prev" type="button">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 14 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M7.992 1.00777L2.016 6.98377L7.992 12.9598L6.984 13.9678L-3.0528e-07 6.98377L6.984 -0.000227365L7.992 1.00777Z"
+											fill="#FFA55C"
+										/>
+										<path
+											d="M1.0083 7.70312L1.0083 6.26313L13.2483 6.26312L13.2483 7.70312L1.0083 7.70312Z"
+											fill="#FFA55C"
+										/>
+									</svg>
+								</button>
+								<button class="testimonials__next" type="button">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 14 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M5.25653 12.96L11.2325 6.984L5.25654 1.008L6.26454 -3.0528e-07L13.2485 6.984L6.26454 13.968L5.25653 12.96Z"
+											fill="#FFA55C"
+										/>
+										<path
+											d="M12.2402 6.26465L12.2402 7.70465L0.000234839 7.70465L0.000234902 6.26465L12.2402 6.26465Z"
+											fill="#FFA55C"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="swiper testimonials__slider">
+							<div class="swiper-wrapper testimonials__wrapper">
+								<div class="swiper-slide testimonials__slide">
+									<div class="testimonials__user">
+										<div class="testimonials__user-img">
+											<img src="./img/content/testimonials/1.jpg" alt="" />
+										</div>
+										<div class="testimonials__user-name">Александра</div>
+										<div class="testimonials__user-social">
+											<img src="./img/icons/socials/inst2.svg" alt="" />
+											akimovaa
+										</div>
+									</div>
+									<blockquote class="testimonials__quote">
+										<span>Спасибо за курс! </span>
+										<p>
+											Действительно понятный и доступный курс для начинающего
+											кондитера. Для того самого, который ничего-ничего не знал,
+											не умел. А спустя месяц уже знает, как сделать так,
+											чтобы было вкусно, красиво и профессионально. А если
+											что-то и непонятно, то всегда можно спросить и уточнить.
+										</p>
+									</blockquote>
+								</div>
+								<div class="swiper-slide testimonials__slide">
+									<div class="testimonials__user">
+										<div class="testimonials__user-img">
+											<img src="./img/content/testimonials/2.jpg" alt="" />
+										</div>
+										<div class="testimonials__user-name">Елизавета</div>
+										<div class="testimonials__user-social">
+											<img src="./img/icons/socials/inst2.svg" alt="" />
+											lizzy_av
+										</div>
+									</div>
+									<blockquote class="testimonials__quote">
+										<span>Для меня действительно сбылась мечта!</span>
+										<p>
+											Это были одни из лучших месяцев моей жизни. Для меня
+											действительно сбылась мечта, к которой я шла уже давно,
+											но не хватало опыта и знаний. Это все дала мне ваша школа.
+											В рецептурах все довольно понятно разъясняется, если есть
+											вопросы, их всегда можно задать, что не мало важно.
+										</p>
+									</blockquote>
+								</div>
+								<div class="swiper-slide testimonials__slide">
+									<div class="testimonials__user">
+										<div class="testimonials__user-img">
+											<img src="./img/content/testimonials/3.jpg" alt="" />
+										</div>
+										<div class="testimonials__user-name">игорь</div>
+										<div class="testimonials__user-social">
+											<img src="./img/icons/socials/inst2.svg" alt="" />
+											igor_sverlovskii
+										</div>
+									</div>
+									<blockquote class="testimonials__quote">
+										<span>Здесь я узнал много чего нового!</span>
+										<p>
+											Спасибо большое Wake & Bake за такой курс! Здесь я узнал
+											много чего нового для меня! Курс очень хороший,
+											захватывает самые актуальные темы для кондитера!
+											Мне понравилось что всегда была поддержка не только
+											со стороны куратора но и таких же учеников-кондитеров
+											как и я. Мне прям аж будет не хватать всего этого.
+										</p>
+									</blockquote>
+								</div>
+								<div class="swiper-slide testimonials__slide">
+									<div class="testimonials__user">
+										<div class="testimonials__user-img">
+											<img src="./img/content/testimonials/1.jpg" alt="" />
+										</div>
+										<div class="testimonials__user-name">Александра</div>
+										<div class="testimonials__user-social">
+											<img src="./img/icons/socials/inst2.svg" alt="" />
+											akimovaa
+										</div>
+									</div>
+									<blockquote class="testimonials__quote">
+										<span>Спасибо за курс! </span>
+										<p>
+											Действительно понятный и доступный курс для начинающего
+											кондитера. Для того самого, который ничего-ничего не знал,
+											не умел. А спустя месяц уже знает, как сделать так,
+											чтобы было вкусно, красиво и профессионально. А если
+											что-то и непонятно, то всегда можно спросить и уточнить.
+										</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="swiper-scrollbar testimonials__scrollbar"></div>
+						</div>
+					</div>
+				</section>
+				<section class="contact" id="contact">
+					<div class="container">
+						<div class="contact__inner">
+							<div class="contact__img">
+								<img src="./img/decor/cake-2.png" alt="" />
+							</div>
+							<div class="contact__body">
+								<h2 class="contact__title title">
+									Оставить заявку на обучение
+								</h2>
+								<p class="contact__text">
+									Заполни контактные данные, и наш менеджер свяжется с тобой в
+									ближайшее время
+								</p>
+								<form class="contact__form">
+									<label class="contact__label field">
+										<input
+											name="field-input"
+											type="text"
+											class="field__input"
+											placeholder="Имя"
+											required
+										/>
+										<span>Введите имя</span>
+									</label>
+									<input
+										name="contact-input"
+										class="contact__input"
+										type="tel"
+										placeholder="Телефон"
+										required
+									/>
+									<label class="contact__check-label">
+										<input class="contact__checkbox" type="checkbox" />
+										<p>
+											Нажимая на кнопку, вы соглашаетесь <br />
+											с
+											<a href="#" target="_blank"
+												>политикой конфиденциальности
+											</a>
+										</p>
+									</label>
+									<button class="button" type="submit">
+										Записаться на курс
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
 			<footer class="footer">
 				<div class="container">
-					<a class="logo" href="#">
-						<img src="./img/logo/logo.png" alt="Логотип компании Dyson" />
-					</a>
 					<div class="footer__inner">
-						<div class="market__inner">
-							<h4>Магазин</h4>
-							<ul class="market__list footer__list">
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Фены Dyson Supersonic</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Стайлеры Dyson Airwrap</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Выпрямители Dyson Corrale</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Пылесосы</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Климатическая техника</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Освещение</a>
-								</li>
-								<li class="market__item list__item">
-									<a class="market__link" href="#">Аксессуары</a>
-								</li>
-							</ul>
-						</div>
-						<div class="about__inner">
-							<h4>О компании</h4>
-							<ul class="about__list footer__list">
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Новости </a>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Доставка</a>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Гарантия</a>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Оплата товара</a>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Свяжитесь с нами</a>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#"
-										>Политика конфиденциальности</a
-									>
-								</li>
-								<li class="about__item list__item">
-									<a class="about__link" href="#">Договор оферты</a>
-								</li>
-							</ul>
-						</div>
-						<div class="footer__connect">
-							<a class="number footer__number" href="tel:+79998004554"
-								>+7 (999) 800-45-54</a
-							>
-							<ul class="socials__list">
-								<li class="socials__item">
-									<a class="socials__link" href="#">
+						<div class="footer__col">
+							<a class="footer-logo" href="#">
+								<img
+									src="./img/icons/logos/logo-light.svg"
+									alt="Логотип компании"
+								/>
+							</a>
+							<p class="logo__text">Школа кондитерского искусства</p>
+							<ul class="socials-icons">
+								<li class="social-icon__item">
+									<a class="social-icon__link" href="#">
 										<svg
-											width="40"
-											height="40"
-											viewBox="0 0 40 40"
+											width="36.000000"
+											height="36.000000"
+											viewBox="0 0 36 36"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
 										>
-											<g clip-path="url(#clip0_474_3918)">
+											<defs>
+												<clipPath id="clip60_592">
+													<rect
+														id="Property 1=Variant2"
+														width="36.000000"
+														height="36.000000"
+														fill="white"
+														fill-opacity="0"
+													/>
+												</clipPath>
+											</defs>
+											<rect
+												id="Property 1=Variant2"
+												width="36.000000"
+												height="36.000000"
+												fill="#FFFFFF"
+												fill-opacity="0"
+											/>
+											<g clip-path="url(#clip60_592)">
 												<path
-													d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
-													fill="white"
+													id="Vector"
+													d="M24 10.5C24 10.1 24.15 9.72 24.43 9.43C24.72 9.15 25.1 9 25.5 9C25.89 9 26.27 9.15 26.56 9.43C26.84 9.72 27 10.1 27 10.5C27 10.89 26.84 11.27 26.56 11.56C26.27 11.84 25.89 12 25.5 12C25.1 12 24.72 11.84 24.43 11.56C24.15 11.27 24 10.89 24 10.5Z"
+													fill="#FFE0CB"
+													fill-opacity="1.000000"
+													fill-rule="nonzero"
 												/>
 												<path
+													id="Vector"
+													d="M18 10.87C16.11 10.87 14.29 11.62 12.96 12.96C11.62 14.29 10.87 16.11 10.87 18C10.87 19.88 11.62 21.7 12.96 23.03C14.29 24.37 16.11 25.12 18 25.12C19.88 25.12 21.7 24.37 23.03 23.03C24.37 21.7 25.12 19.88 25.12 18C25.12 16.11 24.37 14.29 23.03 12.96C21.7 11.62 19.88 10.87 18 10.87ZM13.12 18C13.12 16.7 13.63 15.46 14.55 14.55C15.46 13.63 16.7 13.12 18 13.12C19.29 13.12 20.53 13.63 21.44 14.55C22.36 15.46 22.87 16.7 22.87 18C22.87 19.29 22.36 20.53 21.44 21.44C20.53 22.36 19.29 22.87 18 22.87C16.7 22.87 15.46 22.36 14.55 21.44C13.63 20.53 13.12 19.29 13.12 18Z"
+													fill="#FFE0CB"
+													fill-opacity="1.000000"
 													fill-rule="evenodd"
-													clip-rule="evenodd"
-													d="M9.17357 19.6563C14.9894 17.1223 18.8672 15.4516 20.8071 14.6442C26.3475 12.3409 27.5047 11.9409 28.2489 11.926C28.5249 11.9207 28.7956 12.002 29.0229 12.1586C29.1824 12.2961 29.284 12.4888 29.3075 12.6981C29.3476 12.9584 29.3588 13.2223 29.341 13.4851C29.0415 16.6479 27.741 24.2925 27.0805 27.8256C26.8015 29.3139 26.2508 29.8218 25.7168 29.8721C24.5596 29.9781 23.6703 29.1056 22.554 28.3707C20.7978 27.2191 19.8061 26.5102 18.1019 25.3791C16.1317 24.0767 17.4098 23.3679 18.5317 22.2032C18.8257 21.8981 23.9271 17.2544 24.0275 16.8339C24.0408 16.7718 24.0392 16.7075 24.0231 16.6461C24.0069 16.5847 23.9766 16.528 23.9345 16.4804C23.8734 16.4423 23.8043 16.4189 23.7326 16.4121C23.6609 16.4053 23.5886 16.4153 23.5215 16.4414C23.3466 16.4798 20.5423 18.3335 15.1085 22.0023C14.3122 22.5493 13.5909 22.816 12.9447 22.8023C12.2322 22.7856 10.8629 22.3986 9.84333 22.0581C8.59496 21.6525 7.61078 21.4386 7.68892 20.7558C7.73481 20.3986 8.22969 20.0321 9.17357 19.6563Z"
-													fill="#111111"
+												/>
+												<path
+													id="Vector"
+													d="M25.79 4.42C20.61 3.85 15.38 3.85 10.2 4.42C7.22 4.76 4.81 7.1 4.46 10.1C3.84 15.34 3.84 20.65 4.46 25.89C4.81 28.89 7.21 31.23 10.2 31.57C15.38 32.14 20.61 32.14 25.79 31.57C28.77 31.23 31.18 28.89 31.53 25.89C32.15 20.65 32.15 15.34 31.53 10.1C31.18 7.1 28.78 4.76 25.79 4.42ZM10.44 6.63C15.46 6.08 20.53 6.08 25.55 6.63C27.52 6.85 29.1 8.41 29.33 10.36C29.92 15.43 29.92 20.56 29.33 25.63C29.21 26.59 28.77 27.48 28.08 28.15C27.4 28.83 26.5 29.25 25.55 29.36C20.53 29.91 15.46 29.91 10.44 29.36C9.49 29.25 8.59 28.83 7.91 28.15C7.22 27.48 6.78 26.59 6.66 25.63C6.07 20.56 6.07 15.43 6.66 10.36C6.78 9.4 7.22 8.51 7.91 7.84C8.59 7.16 9.49 6.74 10.44 6.63Z"
+													fill="#FFE0CB"
+													fill-opacity="1.000000"
+													fill-rule="evenodd"
 												/>
 											</g>
-											<defs>
-												<clipPath id="clip0_474_3918">
-													<rect width="40" height="40" fill="white" />
-												</clipPath>
-											</defs>
 										</svg>
 									</a>
 								</li>
-								<li class="socials__item">
-									<a class="socials__link" href="#">
+								<li class="social-icon__item">
+									<a class="social-icon__link" href="/">
 										<svg
-											width="40"
-											height="40"
-											viewBox="0 0 40 40"
+											width="36.000000"
+											height="36.000000"
+											viewBox="0 0 36 36"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
 										>
-											<g clip-path="url(#clip0_474_3922)">
-												<path
-													d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
-													fill="white"
-												/>
-												<path
-													d="M20.733 27.3746C12.9786 27.3746 8.55812 22.0574 8.37207 13.209H12.2549C12.3832 19.702 15.2465 22.4536 17.5144 23.0211V13.209H21.1739V18.809C23.4065 18.569 25.7674 16.0183 26.56 13.209H30.2195C29.6093 16.6676 27.0567 19.2201 25.2428 20.2694C26.6615 20.974 27.9145 21.9716 28.919 23.1965C29.9235 24.4213 30.6566 25.8454 31.0697 27.3746H27.0437C26.1786 24.6806 24.0223 22.5969 21.1739 22.3141V27.3746H20.733Z"
-													fill="#111111"
-												/>
-											</g>
 											<defs>
-												<clipPath id="clip0_474_3922">
-													<rect width="40" height="40" fill="white" />
+												<clipPath id="clip60_589">
+													<rect
+														id="Property 1=Default"
+														width="36.000000"
+														height="36.000000"
+														fill="white"
+														fill-opacity="0"
+													/>
 												</clipPath>
 											</defs>
+											<rect
+												id="Property 1=Default"
+												width="36.000000"
+												height="36.000000"
+												fill="#FFFFFF"
+												fill-opacity="0"
+											/>
+											<g clip-path="url(#clip60_589)">
+												<path
+													id="Vector 2"
+													d="M33.75 17.9C33.75 17.82 33.75 17.73 33.74 17.63C33.74 17.34 33.73 17.03 33.72 16.68C33.7 15.7 33.65 14.73 33.57 13.8C33.46 12.54 33.31 11.48 33.1 10.68C32.88 9.85 32.44 9.1 31.83 8.49C31.23 7.88 30.47 7.44 29.64 7.22C28.65 6.95 26.7 6.79 23.96 6.69C22.65 6.64 21.26 6.6 19.86 6.59C19.37 6.58 18.92 6.58 18.51 6.57L17.48 6.57C17.07 6.58 16.62 6.58 16.13 6.59C14.73 6.6 13.34 6.64 12.03 6.69C9.29 6.79 7.34 6.96 6.35 7.22C5.52 7.44 4.76 7.88 4.16 8.49C3.55 9.1 3.11 9.85 2.89 10.68C2.68 11.48 2.53 12.54 2.42 13.8C2.34 14.73 2.29 15.7 2.27 16.68C2.26 17.03 2.25 17.34 2.25 17.63C2.25 17.73 2.25 17.82 2.25 17.9L2.25 18.09C2.25 18.17 2.25 18.26 2.25 18.36C2.25 18.65 2.26 18.97 2.27 19.31C2.29 20.29 2.34 21.26 2.42 22.19C2.53 23.46 2.68 24.51 2.89 25.31C3.34 26.99 4.66 28.32 6.35 28.77C7.34 29.04 9.29 29.2 12.03 29.31C13.34 29.35 14.73 29.39 16.13 29.4C16.62 29.41 17.07 29.41 17.48 29.42L18.51 29.42C18.92 29.41 19.37 29.41 19.86 29.4C21.26 29.39 22.65 29.35 23.96 29.31C26.7 29.2 28.65 29.03 29.64 28.77C31.33 28.32 32.65 27 33.1 25.31C33.31 24.51 33.46 23.46 33.57 22.19C33.65 21.26 33.7 20.29 33.72 19.31C33.73 18.97 33.74 18.65 33.74 18.36C33.74 18.26 33.75 18.17 33.75 18.09L33.75 17.9ZM31.21 18.08C31.21 18.15 31.21 18.23 31.21 18.33C31.21 18.6 31.2 18.91 31.19 19.23C31.17 20.17 31.12 21.1 31.05 21.97C30.95 23.1 30.82 24.03 30.65 24.65C30.43 25.47 29.79 26.11 28.98 26.32C28.25 26.52 26.39 26.68 23.86 26.77C22.58 26.82 21.2 26.85 19.83 26.87C19.35 26.88 18.9 26.88 18.5 26.88L17.49 26.88L16.16 26.87C14.79 26.85 13.41 26.82 12.13 26.77C9.6 26.68 7.74 26.52 7.01 26.32C6.2 26.11 5.56 25.47 5.34 24.65C5.17 24.03 5.04 23.1 4.94 21.97C4.87 21.1 4.83 20.17 4.8 19.23C4.79 18.91 4.78 18.6 4.78 18.33C4.78 18.23 4.78 18.15 4.78 18.08L4.78 17.91C4.78 17.84 4.78 17.76 4.78 17.66C4.78 17.39 4.79 17.08 4.8 16.76C4.82 15.82 4.87 14.89 4.94 14.02C5.04 12.89 5.17 11.96 5.34 11.34C5.56 10.52 6.2 9.88 7.01 9.67C7.74 9.47 9.6 9.31 12.13 9.22C13.41 9.17 14.79 9.14 16.16 9.12C16.65 9.11 17.09 9.11 17.49 9.11L18.5 9.11L19.83 9.12C21.2 9.14 22.58 9.17 23.86 9.22C26.39 9.32 28.25 9.47 28.98 9.67C29.79 9.88 30.43 10.52 30.65 11.34C30.82 11.96 30.95 12.89 31.05 14.02C31.12 14.89 31.16 15.82 31.19 16.76C31.2 17.08 31.21 17.39 31.21 17.66C31.21 17.76 31.21 17.84 31.21 17.91L31.21 18.08ZM14.87 22.71L23.02 17.96L14.87 13.28L14.87 22.71Z"
+													fill="#FFF9F4"
+													fill-opacity="1.000000"
+													fill-rule="nonzero"
+												/>
+											</g>
 										</svg>
 									</a>
 								</li>
-								<li class="socials__item">
-									<a class="socials__link" href="#">
+								<li class="social-icon__item">
+									<a class="social-icon__link" href="#">
 										<svg
-											width="40"
-											height="40"
-											viewBox="0 0 40 40"
+											width="36.000000"
+											height="36.000000"
+											viewBox="0 0 36 36"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
 										>
-											<g clip-path="url(#clip0_474_3926)">
-												<path
-													d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
-													fill="white"
-												/>
-												<path
-													d="M29.866 14.9164C29.7481 14.4771 29.5167 14.0765 29.1951 13.7548C28.8734 13.4332 28.4728 13.2018 28.0335 13.0839C26.4186 12.6504 19.9349 12.6504 19.9349 12.6504C19.9349 12.6504 13.4511 12.6504 11.8344 13.0839C11.3956 13.2028 10.9955 13.4346 10.674 13.7561C10.3525 14.0776 10.1208 14.4776 10.0018 14.9164C9.56835 16.5332 9.56836 19.9062 9.56836 19.9062C9.56836 19.9062 9.56835 23.2792 10.0018 24.896C10.1208 25.3348 10.3525 25.7349 10.674 26.0563C10.9955 26.3778 11.3956 26.6096 11.8344 26.7285C13.4511 27.162 19.9349 27.162 19.9349 27.162C19.9349 27.162 26.4167 27.162 28.0335 26.7285C28.4728 26.6106 28.8734 26.3792 29.1951 26.0576C29.5167 25.7359 29.7481 25.3353 29.866 24.896C30.2995 23.2792 30.2995 19.9062 30.2995 19.9062C30.2995 19.9062 30.2995 16.5332 29.866 14.9164ZM17.8604 23.015V16.7974L23.2558 19.9062L17.8604 23.015Z"
-													fill="#111111"
-												/>
-											</g>
 											<defs>
-												<clipPath id="clip0_474_3926">
-													<rect width="40" height="40" fill="white" />
+												<clipPath id="clip60_588">
+													<rect
+														id="Property 1=Default"
+														width="36.000000"
+														height="36.000000"
+														fill="white"
+														fill-opacity="0"
+													/>
 												</clipPath>
 											</defs>
+											<rect
+												id="Property 1=Default"
+												width="36.000000"
+												height="36.000000"
+												fill="#FFFFFF"
+												fill-opacity="0"
+											/>
+											<g clip-path="url(#clip60_588)">
+												<path
+													id="Vector 3"
+													d="M35.1 25.29C34.29 23.65 33.21 22.15 31.92 20.85C31.49 20.36 31.03 19.89 30.56 19.44L30.5 19.38C30.33 19.21 30.16 19.04 29.98 18.86C31.75 16.41 33.27 13.77 34.5 11.01L34.55 10.9L34.58 10.78C34.75 10.24 34.93 9.2 34.27 8.26C33.59 7.3 32.5 7.12 31.76 7.12L28.39 7.12C27.69 7.09 26.99 7.28 26.4 7.67C25.81 8.06 25.36 8.63 25.11 9.29C24.38 11.01 23.47 12.66 22.4 14.19L22.4 10.24C22.4 9.73 22.35 8.88 21.8 8.16C21.15 7.3 20.2 7.12 19.54 7.12L14.2 7.12C13.5 7.11 12.82 7.36 12.3 7.83C11.79 8.3 11.47 8.95 11.42 9.65L11.42 9.71L11.42 9.78C11.42 10.51 11.7 11.05 11.93 11.38C12.04 11.54 12.15 11.67 12.22 11.76L12.23 11.78C12.31 11.87 12.36 11.94 12.41 12C12.54 12.18 12.73 12.46 12.78 13.17L12.78 15.38C11.71 13.58 10.83 11.67 10.15 9.69L10.14 9.66L10.13 9.62C9.95 9.15 9.66 8.45 9.07 7.92C8.38 7.3 7.57 7.12 6.84 7.12L3.42 7.12C2.67 7.12 1.77 7.3 1.1 8C0.44 8.7 0.37 9.54 0.37 9.98L0.37 10.18L0.41 10.37C1.36 14.77 3.31 18.89 6.11 22.4C7.4 24.42 9.13 26.11 11.19 27.34C13.25 28.56 15.57 29.28 17.95 29.44L18.01 29.44L18.08 29.44C19.17 29.44 20.3 29.35 21.16 28.78C22.31 28.01 22.4 26.84 22.4 26.25L22.4 24.54C22.69 24.78 23.06 25.1 23.51 25.53C24.05 26.08 24.48 26.55 24.85 26.96L25.05 27.18C25.34 27.5 25.62 27.82 25.88 28.08C26.2 28.4 26.61 28.76 27.11 29.02C27.65 29.31 28.22 29.44 28.83 29.44L32.25 29.44C32.97 29.44 34 29.27 34.73 28.43C35.52 27.51 35.46 26.38 35.22 25.57L35.17 25.43L35.1 25.29ZM26.52 25.45C26.06 24.93 25.58 24.42 25.09 23.93L25.08 23.93C23.05 21.96 22.1 21.62 21.43 21.62C21.07 21.62 20.67 21.66 20.42 21.98C20.3 22.14 20.22 22.32 20.2 22.51C20.16 22.73 20.14 22.95 20.15 23.17L20.15 26.25C20.15 26.63 20.08 26.79 19.91 26.91C19.67 27.07 19.17 27.19 18.09 27.19C16.04 27.05 14.06 26.43 12.3 25.37C10.53 24.32 9.05 22.86 7.96 21.12L7.95 21.1L7.94 21.08C5.32 17.83 3.5 14.01 2.62 9.94C2.63 9.75 2.67 9.63 2.74 9.55C2.81 9.48 2.98 9.37 3.42 9.37L6.84 9.37C7.22 9.37 7.42 9.46 7.56 9.59C7.72 9.73 7.86 9.98 8.03 10.42C8.87 12.89 10 15.2 11.08 16.9C11.61 17.75 12.14 18.45 12.62 18.95C12.86 19.2 13.09 19.41 13.31 19.55C13.53 19.7 13.77 19.81 14.02 19.81C14.16 19.81 14.31 19.79 14.46 19.73C14.62 19.66 14.75 19.54 14.83 19.38C14.99 19.1 15.03 18.68 15.03 18.14L15.03 13.08C14.95 11.85 14.58 11.16 14.22 10.67C14.15 10.57 14.07 10.48 14 10.38L13.98 10.36C13.91 10.28 13.85 10.2 13.79 10.12C13.72 10.03 13.68 9.91 13.67 9.8C13.68 9.68 13.73 9.57 13.83 9.49C13.92 9.41 14.03 9.37 14.15 9.37L19.54 9.37C19.85 9.37 19.96 9.45 20.01 9.52C20.08 9.62 20.15 9.82 20.15 10.24L20.15 17.04C20.15 17.84 20.52 18.39 21.06 18.39C21.68 18.39 22.13 18.01 22.91 17.23L22.93 17.21L22.94 17.2C24.69 15.06 26.13 12.67 27.2 10.12L27.2 10.1C27.28 9.87 27.44 9.68 27.64 9.55C27.84 9.42 28.07 9.36 28.31 9.37L31.76 9.37C32.23 9.37 32.38 9.49 32.44 9.56C32.49 9.64 32.53 9.8 32.44 10.11C31.2 12.87 29.68 15.48 27.89 17.91L27.88 17.93C27.71 18.2 27.52 18.49 27.49 18.83C27.46 19.19 27.62 19.52 27.89 19.87C28.09 20.17 28.5 20.57 28.92 20.98L28.96 21.02C29.4 21.45 29.87 21.91 30.25 22.36L30.27 22.37L30.28 22.39C31.41 23.52 32.36 24.83 33.07 26.26C33.19 26.65 33.12 26.86 33.03 26.96C32.92 27.08 32.69 27.19 32.25 27.19L28.83 27.19C28.59 27.2 28.36 27.14 28.16 27.03C27.9 26.89 27.68 26.7 27.48 26.49C27.26 26.27 27.03 26.01 26.74 25.7L26.52 25.45L26.52 25.45Z"
+													fill="#FFF9F4"
+													fill-opacity="1.000000"
+													fill-rule="evenodd"
+												/>
+											</g>
 										</svg>
 									</a>
 								</li>
 							</ul>
+						</div>
+						<nav class="footer-nav footer__col">
+							<ul class="footer-nav__list">
+								<li class="footer-nav__item">
+									<a class="nav__link" href="#program">Программа обучения</a>
+								</li>
+								<li class="footer-nav__item">
+									<a class="nav__link" href="#gallery">Галерея</a>
+								</li>
+								<li class="footer-nav__item">
+									<a class="nav__link" href="#testimonials">Отзывы</a>
+								</li>
+							</ul>
+						</nav>
+						<address class="footer__col">
+							<ul class="time-location__list">
+								<li class="time-location__item">
+									<img src="./img/icons/clock.svg" alt="" />
+									ПН-ПТ 10:00-20:00
+								</li>
+								<li class="time-location__item">
+									<img src="./img/icons/location.svg" alt="" />
+									г. Москва, ул. Землянская, 9Б
+								</li>
+							</ul>
+						</address>
+						<div class="footer__col">
+							<address class="consultation-tel">
+								Бесплатная консультация
+								<a class="consultation-number" href="tel:+79065505555">
+									+7 (906) 550-55-55
+								</a>
+							</address>
+							<div class="consultation__item">
+								<img src="./img/icons/copy.svg" alt="" />
+								Все права защищены
+							</div>
 						</div>
 					</div>
-					<footer>
-						<p class="copiried">
-							Интернет-магазин dysmarket.ru, 2022 © Все права защищены.
-						</p>
-					</footer>
 				</div>
 			</footer>
 		</div>
+		<div class="modal">
+			<div class="modal__window">
+				<div class="modal__cancel">
+					<svg
+						class="cancel"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
+							stroke="#E1D9E1"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<rect
+							x="0.75"
+							y="0.75"
+							width="22.5"
+							height="22.5"
+							rx="11.25"
+							stroke="#E1D9E1"
+							stroke-width="1.5"
+						/>
+					</svg>
+				</div>
+				<img class="modal__img" src="./img/decor/cupcakes-modal.png" alt="" />
+				<h3 class="modal__title">Удиви своих близких вкусными капкейками</h3>
+				<p class="modal__text">
+					Оставь свой e-mail, и мы вышлем рецепт на почту
+				</p>
+				<form class="modal__form">
+					<label class="modal__form-label field">
+						<input
+							class="modal__form-input field__input"
+							type="email"
+							required
+							placeholder="E-mail"
+						/>
+						<span>Введите e-mail</span>
+					</label>
+					<button class="button modal__button" type="submit">
+						Получить подарок
+					</button>
+				</form>
+			</div>
+		</div>
+		<script src="./js/fslightbox.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script src="./js/inputmask.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

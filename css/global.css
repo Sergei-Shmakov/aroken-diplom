@@ -1,33 +1,32 @@
 :root {
-	--general-text: #111111;
-	--dark-mode-text: #ffffff;
-	--general-bg: #f8f8f8;
-	--promo-bg: #dddddd;
-	--accent-color: #c5358c;
-	--green-color: #68ae5c;
+	--general-text: #312c27;
+	--accent-text: #1f1711;
+	--general-bg: #fff9f4;
+	--accent-color: #ffa55c;
+	--accent-bg: #ffe0cb;
 	--transition: 0.4s;
-	--border-radius: 3px;
-	--card-height: 584px;
+	--border-radius: 20px;
 }
 
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 5vw;
 }
+
 .body {
-	font-family: 'Open-sans', 'Arial', sans-serif;
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	line-height: 1.5;
 	color: var(--general-text);
 	background: var(--general-bg);
 }
-.body::selection {
-	background-color: var(--accent-color);
-}
+
 .body--opened-menu {
-	overflow: visible;
+	overflow: hidden;
 }
 .body--opened-modal {
 	overflow: hidden;
 }
+
 .wrapper {
 	min-height: 100%;
 	width: 100%;
@@ -38,101 +37,145 @@ html {
 .main {
 	flex-grow: 1;
 }
+.main__about {
+	padding-bottom: 140px;
+}
+.main__testimonials {
+	padding-bottom: 140px;
+}
+.main__program {
+	padding-bottom: 145px;
+}
+.main__gallery {
+	padding-bottom: 140px;
+}
+
 .container {
-	max-width: 1390px;
+	max-width: 1310px;
 	margin: 0 auto;
 	padding: 0 15px;
 	height: 100%;
 }
-.hidden {
-	overflow: hidden;
-	opacity: 0;
-	position: absolute;
+.title {
+	font-family: 'Gabriola';
+	font-size: 74px;
+	line-height: 0.82;
+	color: var(--accent-text);
 }
-
-.theme-mode {
-	width: 80px;
-	height: 40px;
-	border-radius: 50px;
-	background: #444444;
-	margin: 0 20px;
-}
-.theme__pointer {
-	width: 30px;
-	height: 30px;
-	margin-left: 5px;
-	border-radius: 50%;
-	background: #111111;
-}
-
-.logo img {
-	width: 123px;
-}
-
-.list__item:hover {
-	color: var(--accent-color);
-	text-shadow: 0px 0px 20px var(--accent-color);
-}
-
-.number:hover {
-	color: #c5599a;
-	text-shadow: 0px 0px 20px var(--accent-color);
-}
-
 .button {
-	font-size: 24px;
-	font-weight: 400;
-	display: flex;
-	max-width: 235px;
-	aspect-ratio: 3.6/1;
-	flex-shrink: 0;
 	width: 100%;
-	padding: 10px 20px;
-	justify-content: center;
+	display: flex;
+	line-height: 1.6;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 3px 15px;
+	height: 62px;
+	background: var(--accent-color);
+	border-radius: 100px;
 	align-items: center;
-	border-radius: 3px;
-	background: #4d57c8;
+	justify-content: center;
 	transition: var(--transition);
 }
+
 .button:hover {
-	box-shadow: 0px 0px 20px #4d57c8;
+	background: #ff9138;
 }
 
-/* ===========================================================================================*/
-/* ===========================================================================================*/
+/* ================================================================================= */
 
-.special-offers {
-	padding: 150px 0;
+.modal {
+	position: fixed;
+	inset: 0;
+	background: #0000006e;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.6s;
 }
 
-.special-offers__title {
-	font-family: 'namu-pro';
-	font-size: 46px;
-	font-weight: 900;
-	line-height: 1.1;
-	padding-bottom: 50px;
+.body--opened-modal .modal--active {
+	opacity: 1;
+	visibility: visible;
 }
-.keywords-list {
-	max-width: 1150px;
+.modal__window {
+	background: var(--general-bg);
+	border-radius: var(--border-radius);
+	padding: 0 60px 60px;
 	position: relative;
-	display: grid;
-	grid-template-columns: repeat(4, auto);
-	gap: 20px;
+	max-width: 428px;
 }
-.keywords-list__item {
-	white-space: nowrap;
-	max-height: 38px;
-	border-radius: 31px;
-	border: 1px solid var(--general-text);
-	padding: 6px 20px;
-	font-size: 18px;
-}
-.keywords__full {
+.modal__cancel {
 	position: absolute;
-	bottom: -50px;
-	left: 0;
-	opacity: 0;
+	top: 20px;
+	right: 20px;
 }
-.filter {
+.modal__cancel rect,
+.modal__cancel path {
+	transition: var(--transition);
+}
+.modal__cancel:hover rect,
+.modal__cancel:hover path {
+	stroke: #ac907a;
+}
+
+.modal__img {
+	margin: -65px 0 15px 13px;
+	max-width: 100%;
+}
+.modal__title {
+	color: var(--accent-text);
+	font-family: 'Gabriola';
+	font-size: 42px;
+	line-height: 0.9;
+	margin-bottom: 10px;
+}
+
+.field {
+	position: relative;
+}
+.field span {
+	position: absolute;
+	top: 12px;
+	left: 28px;
+	font-size: 11px;
+	color: #ac907a;
 	opacity: 0;
+	transition: var(--transition);
+	visibility: hidden;
+	width: 120px;
+}
+.field__input {
+	background: transparent;
+	display: block;
+	width: 100%;
+	border: 1px solid #ac907a;
+	border-radius: 100px;
+	padding: 19px 41px 19px 28px;
+	font-size: 16px;
+	transition: var(--transition);
+}
+.modal__form-input {
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+.field__input:hover {
+	border-color: var(--accent-color);
+}
+.field__input:hover::placeholder {
+	color: var(--accent-color);
+}
+.field__input::placeholder {
+	transition: var(--transition);
+	color: #ac907a;
+}
+
+.field__input:focus {
+	padding: 26px 42px 12px 28px;
+}
+.field__input:focus + span {
+	opacity: 1;
+	visibility: visible;
 }

@@ -6,6 +6,7 @@
 		const burgerIcon = target.closest('.burger-icon')
 		const burgerNavLink = target.closest('.nav__link')
 		if (!burgerIcon && !burgerNavLink) return
+		if (document.documentElement.clientWidth > 900) return
 		if (!document.body.classList.contains('body--opened-menu')) {
 			document.body.classList.add('body--opened-menu')
 		} else {
@@ -13,108 +14,59 @@
 		}
 	}
 
-	//language
-	document.addEventListener('click', selectLanguage)
-	function selectLanguage(e) {
-		const languageSelector = document.querySelector('.language-selector')
-		const selectedLanguage = languageSelector.querySelector(
-			'.selected__language'
-		)
-		const languageDropdown = languageSelector.querySelector('.language__list')
+	//modal
+	const btn = document.querySelector('.about__img-button')
+	const modal = document.querySelector('.modal')
+	const body = document.body
 
-		languageDropdown.querySelectorAll('li').forEach(item => {
-			item.addEventListener('click', function () {
-				const flagSrc = this.querySelector('img').src
-				const langText = this.querySelector('span').textContent
-
-				selectedLanguage.querySelector('img').src = flagSrc
-				selectedLanguage.querySelector('.language-code').textContent = langText
-			})
-		})
-		document.addEventListener('click', function (e) {
-			if (!languageSelector.contains(e.target)) {
-				languageDropdown.style.overflow = 'hidden'
-				languageDropdown.style.opacity = '0'
-			} else {
-				languageDropdown.style.overflow = 'visible'
-				languageDropdown.style.opacity = '1'
-			}
-		})
+	const modalActive = () => {
+		modal.classList.add('modal--active')
+		body.classList.add('body--opened-modal')
 	}
-	document.addEventListener('click', selectLanguageMenu)
-	function selectLanguageMenu(e) {
-		const languageSelectorMenu = document.querySelector(
-			'.language-selector__menu'
-		)
-		const selectedLanguageMenu = languageSelectorMenu.querySelector(
-			'.selected__language__menu'
-		)
-		const languageDropdownMenu = languageSelectorMenu.querySelector(
-			'.language__list__menu'
-		)
-
-		languageDropdownMenu.querySelectorAll('li').forEach(item => {
-			item.addEventListener('click', function () {
-				const flagSrc = this.querySelector('img').src
-				const langText = this.querySelector('span').textContent
-
-				selectedLanguageMenu.querySelector('img').src = flagSrc
-				selectedLanguageMenu.querySelector('.language-code').textContent =
-					langText
-			})
-		})
-		document.addEventListener('click', function (e) {
-			if (!languageSelectorMenu.contains(e.target)) {
-				languageDropdownMenu.style.overflow = 'hidden'
-				languageDropdownMenu.style.opacity = '0'
-			} else {
-				languageDropdownMenu.style.overflow = 'visible'
-				languageDropdownMenu.style.opacity = '1'
-			}
-		})
+	const modalClose = () => {
+		modal.classList.remove('modal--active')
+		body.classList.remove('body--opened-modal')
 	}
 
-	//button active
+	btn.addEventListener('click', modalActive)
 
-	document.addEventListener('DOMContentLoaded', function () {
-		function checkRequiredFields(form) {
-			const requiredInputs = form.querySelectorAll('input[required]')
-			let allFilled = true
-			requiredInputs.forEach(input => {
-				if (!input.value.trim()) {
-					allFilled = false
-				}
-			})
-			return allFilled
-		}
-		function updateSubmitButton(form) {
-			const submitButton = form.querySelector('button[type="submit"]')
-			if (!submitButton) return
-			const isFormValid = checkRequiredFields(form)
-			if (isFormValid) {
-				submitButton.classList.add('feedback__button--active')
-				submitButton.disabled = false
-			} else {
-				submitButton.classList.remove('feedback__button--active')
-				submitButton.disabled = true
-			}
-		}
-		document.addEventListener('click', function (event) {
-			const contactForm = event.target.closest('.form, form')
-			if (contactForm) {
-				const requiredInputs = contactForm.querySelectorAll('input[required]')
-				requiredInputs.forEach(input => {
-					input.addEventListener('input', function () {
-						updateSubmitButton(contactForm)
-					})
-				})
-				updateSubmitButton(contactForm)
-			}
-		})
-		document.querySelectorAll('.form, form').forEach(form => {
-			updateSubmitButton(form)
-		})
+	modal.addEventListener('click', event => {
+		const target = event.target
+		if (
+			target.classList.contains('cancel') ||
+			target.classList.contains('modal__button')
+		)
+			modalClose()
 	})
+	document.addEventListener('keydown', event => {
+		if (event.code === 'Escape' && modal.classList.contains('modal--active'))
+			modalClose()
+	})
+
+	//tab
+	const tabControls = document.querySelector('.tab-controls')
+	tabControls.addEventListener('click', switchTab)
+
+	function switchTab(e) {
+		const tabControl = e.target.closest('.tab-controls__link')
+
+		if (!tabControl) return
+		e.preventDefault()
+		if (tabControl.classList.contains('tab-controls__link--active')) return
+
+		const tabContentID = tabControl.getAttribute('href')
+		const tabContent = document.querySelector(tabContentID)
+		const contentActive = document.querySelector('.tab-content--show')
+		const controlsActive = document.querySelector('.tab-controls__link--active')
+
+		if (contentActive) contentActive.classList.remove('tab-content--show')
+		if (controlsActive)
+			controlsActive.classList.remove('tab-controls__link--active')
+
+		tabContent.classList.add('tab-content--show')
+		tabControl.classList.add('tab-controls__link--active')
+	}
+
 	//accordion
 
 	const accordionLists = document.querySelectorAll('.accordion-list')
@@ -126,7 +78,7 @@
 				'.accordion-list__item--opened'
 			)
 			const accordionOpenedContent = accordionList.querySelector(
-				'.accordion-list__item--opened .accordion__item-text'
+				'.accordion-list__item--opened .accordion-list__content'
 			)
 
 			const accordionControl = e.target.closest('.accordion-list__control')
@@ -148,23 +100,62 @@
 		})
 	})
 
-	const container = document.querySelector('.news-list')
-	const button = document.querySelector('.show__more')
+	//slider-gallery
+	new Swiper('.gallery__slider', {
+		spaceBetween: 15,
+		slidesPerView: 1.5,
+		pagination: {
+			el: '.gallery__pagination',
+			type: 'fraction',
+		},
 
-	button.addEventListener('click', function () {
-		if (container.classList.contains('news-list--closed')) {
-			container.classList.remove('news-list--closed')
-			button.classList.add('show__more--close')
-		} else {
-			container.scrollTo({
-				top: 0,
-				behavior: 'smooth',
-			})
-
-			setTimeout(() => {
-				container.classList.add('news-list--closed')
-				button.classList.remove('show__more--close')
-			}, 1)
-		}
+		navigation: {
+			nextEl: '.gallery__next',
+			prevEl: '.gallery__prev',
+		},
+		breakpoints: {
+			601: {
+				slidesPerView: 3,
+			},
+			801: {
+				spaceBetween: 32,
+			},
+			1101: {
+				slidesPerView: 4,
+			},
+		},
 	})
+
+	//slider-feedback
+
+	new Swiper('.testimonials__slider', {
+		spaceBetween: 0,
+		slidesPerView: 1,
+		centeredSlides: true,
+
+		navigation: {
+			nextEl: '.testimonials__next',
+			prevEl: '.testimonials__prev',
+		},
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		breakpoints: {
+			// 601: {
+			// 	slidesPerView: 3,
+			// },
+			901: {
+				slidesPerView: 1.5,
+			},
+			1201: {
+				slidesPerView: 2.05,
+			},
+		},
+	})
+
+	//mask
+
+	const telInputs = document.querySelectorAll('input[type="tel"]')
+	const im = new Inputmask('+7 (999) 999-99-99')
+	im.mask(telInputs)
 })()
