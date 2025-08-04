@@ -100,3 +100,39 @@ html {
 
 /* ===========================================================================================*/
 /* ===========================================================================================*/
+
+.special-offers {
+	padding: 150px 0;
+}
+
+.special-offers__title {
+	font-family: 'namu-pro';
+	font-size: 46px;
+	font-weight: 900;
+	line-height: 1.1;
+	padding-bottom: 50px;
+}
+.keywords-list {
+	max-width: 1150px;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	gap: 20px;
+}
+.keywords-list__item {
+	white-space: nowrap;
+	max-height: 38px;
+	border-radius: 31px;
+	border: 1px solid var(--general-text);
+	padding: 6px 20px;
+	font-size: 18px;
+}
+.keywords__full {
+	position: absolute;
+	bottom: -50px;
+	left: 0;
+	opacity: 0;
+}
+.filter {
+	opacity: 0;
+}
