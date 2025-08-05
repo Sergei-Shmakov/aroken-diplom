@@ -6,7 +6,6 @@
 		const burgerIcon = target.closest('.burger-icon')
 		const burgerNavLink = target.closest('.nav__link')
 		if (!burgerIcon && !burgerNavLink) return
-		if (document.documentElement.clientWidth > 900) return
 		if (!document.body.classList.contains('body--opened-menu')) {
 			document.body.classList.add('body--opened-menu')
 		} else {
@@ -14,59 +13,77 @@
 		}
 	}
 
-	//modal
-	const btn = document.querySelector('.about__img-button')
-	const modal = document.querySelector('.modal')
-	const body = document.body
+	//language
 
-	const modalActive = () => {
-		modal.classList.add('modal--active')
-		body.classList.add('body--opened-modal')
-	}
-	const modalClose = () => {
-		modal.classList.remove('modal--active')
-		body.classList.remove('body--opened-modal')
-	}
-
-	btn.addEventListener('click', modalActive)
-
-	modal.addEventListener('click', event => {
-		const target = event.target
-		if (
-			target.classList.contains('cancel') ||
-			target.classList.contains('modal__button')
+	document.addEventListener('click', selectLanguage)
+	function selectLanguage(e) {
+		const languageSelector = document.querySelector('.language-selector')
+		const selectedLanguage = languageSelector.querySelector(
+			'.selected__language'
 		)
-			modalClose()
-	})
-	document.addEventListener('keydown', event => {
-		if (event.code === 'Escape' && modal.classList.contains('modal--active'))
-			modalClose()
-	})
+		const languageDropdown = languageSelector.querySelector('.language__list')
 
-	//tab
-	const tabControls = document.querySelector('.tab-controls')
-	tabControls.addEventListener('click', switchTab)
+		languageDropdown.querySelectorAll('li').forEach(item => {
+			item.addEventListener('click', function () {
+				const flagSrc = this.querySelector('img').src
+				const langText = this.querySelector('span').textContent
 
-	function switchTab(e) {
-		const tabControl = e.target.closest('.tab-controls__link')
-
-		if (!tabControl) return
-		e.preventDefault()
-		if (tabControl.classList.contains('tab-controls__link--active')) return
-
-		const tabContentID = tabControl.getAttribute('href')
-		const tabContent = document.querySelector(tabContentID)
-		const contentActive = document.querySelector('.tab-content--show')
-		const controlsActive = document.querySelector('.tab-controls__link--active')
-
-		if (contentActive) contentActive.classList.remove('tab-content--show')
-		if (controlsActive)
-			controlsActive.classList.remove('tab-controls__link--active')
-
-		tabContent.classList.add('tab-content--show')
-		tabControl.classList.add('tab-controls__link--active')
+				selectedLanguage.querySelector('img').src = flagSrc
+				selectedLanguage.querySelector('.language-code').textContent = langText
+			})
+		})
+		document.addEventListener('click', function (e) {
+			if (!languageSelector.contains(e.target)) {
+				languageDropdown.style.overflow = 'hidden'
+				languageDropdown.style.opacity = '0'
+			} else {
+				languageDropdown.style.overflow = 'visible'
+				languageDropdown.style.opacity = '1'
+			}
+		})
 	}
 
+	//button active
+
+	document.addEventListener('DOMContentLoaded', function () {
+		function checkRequiredFields(form) {
+			const requiredInputs = form.querySelectorAll('input[required]')
+			let allFilled = true
+			requiredInputs.forEach(input => {
+				if (!input.value.trim()) {
+					allFilled = false
+				}
+			})
+			return allFilled
+		}
+		function updateSubmitButton(form) {
+			const submitButton = form.querySelector('button[type="submit"]')
+			if (!submitButton) return
+			const isFormValid = checkRequiredFields(form)
+			if (isFormValid) {
+				submitButton.classList.add('feedback__button--active')
+				submitButton.disabled = false
+			} else {
+				submitButton.classList.remove('feedback__button--active')
+				submitButton.disabled = true
+			}
+		}
+		document.addEventListener('click', function (event) {
+			const contactForm = event.target.closest('.form, form')
+			if (contactForm) {
+				const requiredInputs = contactForm.querySelectorAll('input[required]')
+				requiredInputs.forEach(input => {
+					input.addEventListener('input', function () {
+						updateSubmitButton(contactForm)
+					})
+				})
+				updateSubmitButton(contactForm)
+			}
+		})
+		document.querySelectorAll('.form, form').forEach(form => {
+			updateSubmitButton(form)
+		})
+	})
 	//accordion
 
 	const accordionLists = document.querySelectorAll('.accordion-list')
@@ -78,7 +95,7 @@
 				'.accordion-list__item--opened'
 			)
 			const accordionOpenedContent = accordionList.querySelector(
-				'.accordion-list__item--opened .accordion-list__content'
+				'.accordion-list__item--opened .accordion__item-text'
 			)
 
 			const accordionControl = e.target.closest('.accordion-list__control')
@@ -100,62 +117,76 @@
 		})
 	})
 
-	//slider-gallery
-	new Swiper('.gallery__slider', {
-		spaceBetween: 15,
-		slidesPerView: 1.5,
-		pagination: {
-			el: '.gallery__pagination',
-			type: 'fraction',
-		},
+	const container = document.querySelector('.news-list')
+	const button = document.querySelector('.show__more')
 
-		navigation: {
-			nextEl: '.gallery__next',
-			prevEl: '.gallery__prev',
-		},
-		breakpoints: {
-			601: {
-				slidesPerView: 3,
-			},
-			801: {
-				spaceBetween: 32,
-			},
-			1101: {
-				slidesPerView: 4,
-			},
-		},
+	button.addEventListener('click', function () {
+		if (container.classList.contains('news-list--closed')) {
+			container.classList.remove('news-list--closed')
+			button.classList.add('show__more--close')
+		} else {
+			container.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			})
+
+			setTimeout(() => {
+				container.classList.add('news-list--closed')
+				button.classList.remove('show__more--close')
+			}, 1)
+		}
 	})
 
-	//slider-feedback
+	//показать еще спецпредложения
+	document.addEventListener('DOMContentLoaded', function () {
+		const container = document.getElementById('keywords-list')
+		const btn = document.getElementById('keywords__full')
 
-	new Swiper('.testimonials__slider', {
-		spaceBetween: 0,
-		slidesPerView: 1,
-		centeredSlides: true,
-
-		navigation: {
-			nextEl: '.testimonials__next',
-			prevEl: '.testimonials__prev',
-		},
-		scrollbar: {
-			el: '.swiper-scrollbar',
-		},
-		breakpoints: {
-			// 601: {
-			// 	slidesPerView: 3,
-			// },
-			901: {
-				slidesPerView: 1.5,
-			},
-			1201: {
-				slidesPerView: 2.05,
-			},
-		},
+		btn.addEventListener('click', function () {
+			if (container.classList.contains('keywords-list--open')) {
+				container.style.maxHeight = '38px'
+				container.classList.remove('keywords-list--open')
+				btn.classList.remove('keywords__full--open')
+				btn.textContent = 'Показать еще'
+			} else {
+				container.style.maxHeight = container.scrollHeight + 'px'
+				container.classList.add('keywords-list--open')
+				btn.classList.add('keywords__full--open')
+				btn.textContent = 'Скрыть'
+			}
+		})
+	})
+	//filter
+	document.addEventListener('click', function (e) {
+		const filterSelector = document.querySelector('.filter-selector')
+		const selectedFilter = filterSelector.querySelector('.selected__filter')
+		const filterDropdown = filterSelector.querySelector('.filter__list')
+		if (!selectedFilter.contains(e.target)) {
+			filterDropdown.classList.remove('filter__list--active')
+			selectedFilter.classList.remove('selected__filter--active')
+		} else {
+			filterDropdown.classList.toggle('filter__list--active')
+			selectedFilter.classList.toggle('selected__filter--active')
+		}
 	})
 
-	//mask
-
-	const telInputs = document.querySelectorAll('input[type="tel"]')
-	const im = new Inputmask('+7 (999) 999-99-99')
-	im.mask(telInputs)
+	document.addEventListener('click', selectFilter)
+	function selectFilter(e) {
+		const filterSelector = document.querySelector('.filter-selector')
+		const selectedFilter = filterSelector.querySelector('.selected__filter')
+		const filterDropdown = filterSelector.querySelector('.filter__list')
+		filterDropdown.querySelectorAll('li').forEach(item => {
+			item.addEventListener('click', function () {
+				const nowFilter = filterDropdown.querySelector(
+					'.filter__list__item--active'
+				)
+				if (nowFilter) {
+					nowFilter.classList.remove('filter__list__item--active')
+				}
+				const filterText = this.querySelector('span').textContent
+				selectedFilter.querySelector('.filter-text').textContent = filterText
+				item.classList.add('filter__list__item--active')
+			})
+		})
+	}
 })()

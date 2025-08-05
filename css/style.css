@@ -2,10 +2,11 @@
 @import 'reset.css';
 @import 'global.css';
 @import 'header.css';
-@import 'about.css';
-@import 'program.css';
-@import 'gallery.css';
-@import 'testimonials.css';
-@import 'contact.css';
+@import 'promo.css';
+@import 'sale.css';
+@import 'advantages.css';
+@import 'accordion.css';
+@import 'news.css';
+@import 'feedback.css';
 @import 'footer.css';
 @import 'media.css';
