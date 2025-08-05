@@ -189,4 +189,38 @@
 			})
 		})
 	}
+
+	//cards
+	document.addEventListener('DOMContentLoaded', () => {
+		const numberInputs = document.querySelectorAll('.card-form__input')
+
+		numberInputs.forEach(container => {
+			const decrementBtn = container.querySelector('.input-decrement')
+			const incrementBtn = container.querySelector('.input-increment')
+			const input = container.querySelector('input[type="number"]')
+
+			const updateButtons = () => {
+				const min = parseInt(input.min) || 0
+				decrementBtn.disabled = parseInt(input.value) <= min
+			}
+
+			decrementBtn.addEventListener('click', e => {
+				e.preventDefault()
+				const min = parseInt(input.min) || 0
+				const current = parseInt(input.value) || min
+				input.value = Math.max(min, current - 1)
+				updateButtons()
+			})
+
+			incrementBtn.addEventListener('click', e => {
+				e.preventDefault()
+				const current = parseInt(input.value) || 0
+				input.value = current + 1
+				updateButtons()
+			})
+
+			input.addEventListener('input', updateButtons)
+			updateButtons()
+		})
+	})
 })()
