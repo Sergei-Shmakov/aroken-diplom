@@ -9,6 +9,7 @@
 			href="./img/logo/main-logo.webp"
 			type="image/x-icon"
 		/>
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Dyson</title>
 	</head>
@@ -509,173 +510,778 @@
 						</button>
 					</div>
 					<div class="product-card">
-						<ul class="product-cards-list">
-							<li class="product-cards-list__item">
-								<img class="card__img" src="./img/offers/offer-1.png" alt="" />
-								<h3 class="card__title">
-									Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и
-									расческами
-								</h3>
-								<div class="card-price">
-									<p class="card-price__stock">В наличии</p>
-									<div class="card-price__sale">-15%</div>
-									<p class="card-price__now">59 990Р</p>
-									<p class="card-price__before">69 990 Р</p>
-								</div>
-								<form class="card-form">
-									<div class="card-form__input">
-										<button
-											class="input__button input-decrement input__button--disabled"
-										>
-											<svg
-												width="20"
-												height="2"
-												viewBox="0 0 20 2"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+						<div class="product-card__inner swiper">
+							<ul class="product-cards-list swiper-wrapper">
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="59990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-1.png"
+												alt="Фен Dyson Supersonic HD07 синий медный с 5 насадками в
+											чехле и расческами"
+											/>
+										</div>
+										<h3 class="card__title">
+											Фен Dyson Supersonic HD07 синий медный с 5 насадками в
+											чехле и расческами
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-15%</div>
+											<p class="card-price__now">59 990Р</p>
+											<p class="card-price__before">69 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M19 1H1"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-										<input type="number" value="1" min="1" />
-										<button class="input__button input-increment">
-											<svg
-												width="20"
-												height="20"
-												viewBox="0 0 20 20"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="47990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-2.png"
+												alt="Фен Dyson Supersonic HD07 розовый с 5 насадками и подставкой"
+											/>
+										</div>
+										<h3 class="card__title">
+											Фен Dyson Supersonic HD07 розовый с 5 насадками и
+											подставкой
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-15%</div>
+											<p class="card-price__now">47 990Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-									</div>
-									<button class="button in-bascet" type="submit">
-										В корзину
-									</button>
-								</form>
-							</li>
-							<li class="product-cards-list__item">
-								<img class="card__img" src="./img/offers/offer-1.png" alt="" />
-								<h3 class="card__title">
-									Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и
-									расческами
-								</h3>
-								<div class="card-price">
-									<p class="card-price__stock">В наличии</p>
-									<div class="card-price__sale">-15%</div>
-									<p class="card-price__now">59 990Р</p>
-									<p class="card-price__before">69 990 Р</p>
-								</div>
-								<form class="card-form">
-									<div class="card-form__input">
-										<button
-											class="input__button input-decrement input__button--disabled"
-										>
-											<svg
-												width="20"
-												height="2"
-												viewBox="0 0 20 2"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="46990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-3.png"
+												alt="Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения
+											цвет сирень"
+											/>
+										</div>
+										<h3 class="card__title">
+											Фен Dyson Supersonic 4 насадки HD03 с чехлом для хранения
+											цвет сирень
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-15%</div>
+											<p class="card-price__now">46 990Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M19 1H1"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-										<input type="number" value="1" min="1" />
-										<button class="input__button input-increment">
-											<svg
-												width="20"
-												height="20"
-												viewBox="0 0 20 20"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="59990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-4.jpg"
+												alt="Фен Dyson Supersonic HD07 медного цвета с 5
+												насадками и чехлом. Ускоренная сушка, интеллектуальный
+												контроль, защита волос."
+											/>
+										</div>
+										<h3 class="card__title">
+											Фен Dyson Supersonic HD07 медного цвета с 5 насадками и
+											чехлом
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock card-price__stock--soldout">
+												Нет в наличии
+											</p>
+											<div class="card-price__sale">-15%</div>
+											<p class="card-price__now">59 990Р</p>
+											<p class="card-price__before">69 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-									</div>
-									<button class="button in-bascet" type="submit">
-										В корзину
-									</button>
-								</form>
-							</li>
-							<li class="product-cards-list__item">
-								<img class="card__img" src="./img/offers/offer-1.png" alt="" />
-								<h3 class="card__title">
-									Фен Dyson Supersonic HD07 синий медный с 5 насадками в чехле и
-									расческами
-								</h3>
-								<div class="card-price">
-									<p class="card-price__stock">В наличии</p>
-									<div class="card-price__sale">-15%</div>
-									<p class="card-price__now">59 990Р</p>
-									<p class="card-price__before">69 990 Р</p>
-								</div>
-								<form class="card-form">
-									<div class="card-form__input">
-										<button
-											class="input__button input-decrement input__button--disabled"
-										>
-											<svg
-												width="20"
-												height="2"
-												viewBox="0 0 20 2"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="46990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-5.jpg"
+												alt="Dyson Supersonic HD07 с насадками и подставкой."
+											/>
+										</div>
+										<h3 class="card__title">
+											Dyson Supersonic HD07 серебряный с насадками и подставкой
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-10%</div>
+											<p class="card-price__now">46 990 Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M19 1H1"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-										<input type="number" value="1" min="1" />
-										<button class="input__button input-increment">
-											<svg
-												width="20"
-												height="20"
-												viewBox="0 0 20 20"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="46990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-6.jpg"
+												alt="Dyson Supersonic HD03 розовый с комплектом насадок, магнитный
+											дизайн, поддержание тепла и сияния"
+											/>
+										</div>
+										<h3 class="card__title">
+											Dyson Supersonic HD03 розовый с комплектом насадок,
+											магнитный дизайн
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-10%</div>
+											<p class="card-price__now">46 990 Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
 											>
-												<path
-													d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
-													stroke="#111111"
-													stroke-width="2"
-													stroke-linecap="round"
-												/>
-											</svg>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
 										</button>
-									</div>
-									<button class="button in-bascet" type="submit">
-										В корзину
-									</button>
-								</form>
-							</li>
-						</ul>
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="40490"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												style="padding-top: 5px"
+												class="card-img__picture"
+												src="./img/offers/offer-7.webp"
+												alt="Dyson Supersonic HD07 Ionic Profesional Onyx/Gold, 1600 W, 5 аксессуаров, чехол. Быстрая сушка, уход за волосами. "
+											/>
+										</div>
+										<h3 class="card__title">
+											Dyson Supersonic HD07 Ionic Profesional Onyx/Gold, 1600 W,
+											5 аксессуаров, чехол.
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-20%</div>
+											<p class="card-price__now">40 490 Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
+											>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
+										</button>
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="49990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-8.jpg"
+												alt="Dyson Purifier Hot+Cool сильный HEPA‑фильтр, вентилятор и обогреватель в одном. Удаляет аллергены, циркулирует воздух, работает как кулер."
+											/>
+										</div>
+										<h3 class="card__title">
+											Dyson Purifier Hot+Cool сильный HEPA‑фильтр, вентилятор и
+											обогреватель в одном.
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock card-price__stock--soldout">
+												Нет в наличии
+											</p>
+											<div class="card-price__sale">-17%</div>
+											<p class="card-price__now">49 990 Р</p>
+											<p class="card-price__before">59 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
+											>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
+										</button>
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="45990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-9.jpg"
+												alt="Dyson Airwrap Straight+Wavy Ceramic Patina/Topaz с 6 насадками и адаптивным управлением через Bluetooth. Curl, wave, smooth, hide flyaways без сильного тепла."
+											/>
+										</div>
+										<h3 class="card__title">
+											Dyson Airwrap Straight+Wavy Ceramic Patina/Topaz с 6
+											насадками
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-25%</div>
+											<p class="card-price__now">45 990 Р</p>
+											<p class="card-price__before">60 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
+											>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
+										</button>
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="46990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-10.jpg"
+												alt="Стайлер Airwrap Complete Long HS05 Prussian Blue/Rich Cooper (Берлинская лазурь/Медь)"
+											/>
+										</div>
+										<h3 class="card__title">
+											Стайлер Airwrap Complete Long HS05 Prussian Blue/Rich
+											Cooper
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-10%</div>
+											<p class="card-price__now">46 990 Р</p>
+											<p class="card-price__before">51 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
+											>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
+										</button>
+									</form>
+								</li>
+								<li
+									class="product-cards-list__item swiper-slide"
+									data-price="45990"
+								>
+									<a class="card__link" href="#">
+										<div class="card-img">
+											<img
+												class="card-img__picture"
+												src="./img/offers/offer-11.jpg"
+												alt="Пылесос Dyson V12 Detect slim absolute (SV46 UK, yellow/nickel"
+											/>
+										</div>
+										<h3 class="card__title">
+											Пылесос Dyson V12 Detect slim absolute (SV46) UK,
+											yellow/nickel
+										</h3>
+										<div class="card-price">
+											<p class="card-price__stock">В наличии</p>
+											<div class="card-price__sale">-40%</div>
+											<p class="card-price__now">45 990 Р</p>
+											<p class="card-price__before">79 990 Р</p>
+										</div>
+									</a>
+									<form class="card-form">
+										<div class="card-form__input">
+											<button
+												class="input__button input-decrement input__button--disabled"
+											>
+												<svg
+													width="20"
+													height="2"
+													viewBox="0 0 20 2"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M19 1H1"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+											<input type="number" value="1" min="1" />
+											<button class="input__button input-increment">
+												<svg
+													width="20"
+													height="20"
+													viewBox="0 0 20 20"
+													fill="none"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														d="M10.0003 19L10.0346 10M10.0003 1L10.0346 10M10.0346 10H19M10.0346 10H0.999999"
+														stroke="#111111"
+														stroke-width="2"
+														stroke-linecap="round"
+													/>
+												</svg>
+											</button>
+										</div>
+										<button class="button in-bascet" type="submit">
+											В корзину
+										</button>
+									</form>
+								</li>
+							</ul>
+							<button class="card-prev" type="button">
+								<svg
+									width="35"
+									height="30"
+									viewBox="0 0 35 30"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M3.58768 16.1698L33.3387 15.8428C33.8909 15.8367 34.3337 15.3841 34.3276 14.8318C34.3215 14.2796 33.8689 13.8368 33.3167 13.8429L3.42033 14.1715L15.0001 1.81932C15.3778 1.4164 15.3574 0.783566 14.9545 0.405844C14.5515 0.0281214 13.9187 0.048547 13.541 0.451466L0.358522 14.5133C-0.0192005 14.9162 0.00122539 15.549 0.404144 15.9268L15.1086 29.7117C15.5116 30.0894 16.1444 30.069 16.5221 29.6661C16.8998 29.2632 16.8794 28.6303 16.4765 28.2526L3.58768 16.1698Z"
+										fill="#111111"
+									/>
+								</svg>
+							</button>
+							<button class="card-next" type="button">
+								<svg
+									width="35"
+									height="30"
+									viewBox="0 0 35 30"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M31.4123 16.1698L1.66134 15.8428C1.10909 15.8367 0.666325 15.3841 0.672395 14.8318C0.678466 14.2796 1.13108 13.8368 1.68333 13.8429L31.5797 14.1715L19.9999 1.81932C19.6222 1.4164 19.6426 0.783566 20.0455 0.405844C20.4485 0.0281214 21.0813 0.048547 21.459 0.451466L34.6415 14.5133C35.0192 14.9162 34.9988 15.549 34.5959 15.9268L19.8914 29.7117C19.4884 30.0894 18.8556 30.069 18.4779 29.6661C18.1002 29.2632 18.1206 28.6303 18.5235 28.2526L31.4123 16.1698Z"
+										fill="#111111"
+									/>
+								</svg>
+							</button>
+							<div class="card-pagination"></div>
+						</div>
 						<div class="filter-selector">
 							<div class="selected__filter">
 								<span class="filter-text">Сначала популярный</span>
@@ -692,8 +1298,8 @@
 									/>
 								</svg>
 							</div>
-							<ul class="filter__list">
-								<li class="most-ricey filter__list__item">
+							<ul class="filter__list" id="filter__list">
+								<li class="most-ricey filter__list__item" data-sort="desc">
 									<span>Сначала дорогие</span>
 									<svg
 										width="17"
@@ -710,7 +1316,7 @@
 										/>
 									</svg>
 								</li>
-								<li class="most-cheap filter__list__item">
+								<li class="most-cheap filter__list__item" data-sort="asc">
 									<span>Сначала дешевые</span>
 									<svg
 										width="17"
@@ -727,7 +1333,7 @@
 										/>
 									</svg>
 								</li>
-								<li class="in-stock filter__list__item">
+								<li class="in-stock filter__list__item" data-sort="stock">
 									<span>В наличии</span>
 									<svg
 										width="17"
@@ -744,7 +1350,7 @@
 										/>
 									</svg>
 								</li>
-								<li class="best-benefit filter__list__item">
+								<li class="best-benefit filter__list__item" data-sort="sale">
 									<span>Наибольшая выгода</span>
 									<svg
 										width="17"
@@ -763,6 +1369,7 @@
 								</li>
 								<li
 									class="most-popular filter__list__item filter__list__item--active"
+									data-sort="popular"
 								>
 									<span>Сначала популярный</span>
 									<svg
@@ -1355,6 +1962,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="./js/swiper-bundle.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

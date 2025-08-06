@@ -223,4 +223,108 @@
 			updateButtons()
 		})
 	})
+	document.addEventListener('DOMContentLoaded', function () {
+		const list = document.querySelector('.product-cards-list')
+		const cards = Array.from(list.children)
+
+		const filterItems = document.querySelectorAll('.filter__list_item')
+
+		filterItems.forEach(filterItem => {
+			filterItem.addEventListener('click', () => {
+				const order = filterItem.getAttribute('data-sort') // "asc" or "desc"
+
+				const sortedCards = [...cards].sort((a, b) => {
+					const priceA = parseInt(a.dataset.price, 10)
+					const priceB = parseInt(b.dataset.price, 10)
+
+					return order === 'asc' ? priceA - priceB : priceB - priceA
+				})
+
+				// Очистка и вставка отсортированных карточек
+				list.innerHTML = ''
+				sortedCards.forEach(card => list.appendChild(card))
+			})
+		})
+	})
+
+	//свайпер карточек
+	const swiper = new Swiper('.product-card__inner', {
+		loop: false,
+		slidesPerView: 3,
+
+		grid: {
+			rows: 2,
+		},
+		spaceBetween: 20,
+		pagination: {
+			type: 'fraction',
+			el: '.card-pagination',
+		},
+		navigation: {
+			nextEl: '.card-next',
+			prevEl: '.card-prev',
+		},
+	})
+	document.addEventListener('DOMContentLoaded', () => {
+		const pagination = document.querySelector(
+			'.card-pagination.swiper-pagination-fraction'
+		)
+
+		if (pagination) {
+			const nodes = pagination.childNodes
+
+			nodes.forEach(node => {
+				if (
+					node.nodeType === Node.TEXT_NODE &&
+					node.textContent.includes('/')
+				) {
+					node.textContent = ' из '
+				}
+			})
+		}
+	})
+	const filterItems = document.querySelectorAll(
+		'.filter-list .filter_list_item'
+	)
+
+	filterItems.forEach(item => {
+		item.addEventListener('click', () => {
+			// Remove 'active' class from all filter items
+			filterItems.forEach(i => i.classList.remove('active'))
+			// Add 'active' class to the clicked item
+			item.classList.add('active')
+			const sortType = item.getAttribute('data-sort')
+			sortProductCards(sortType)
+		})
+	})
+
+	function sortProductCards(sortType) {
+		const productList = document.querySelector('.product-cards-list')
+		const productItems = Array.from(
+			productList.querySelectorAll('.product-cards-list_item')
+		)
+
+		if (sortType === 'asc') {
+			productItems.sort(
+				(a, b) =>
+					parseFloat(a.getAttribute('data-price')) -
+					parseFloat(b.getAttribute('data-price'))
+			)
+		} else if (sortType === 'desc') {
+			productItems.sort(
+				(a, b) =>
+					parseFloat(b.getAttribute('data-price')) -
+					parseFloat(a.getAttribute('data-price'))
+			)
+		}
+		// Add additional sorting logic for 'stock' or 'sale' here if corresponding data attributes are available
+
+		// Reorder the DOM by appending sorted items
+		productItems.forEach(item => {
+			productList.appendChild(item)
+		})
+
+		// Update the Swiper instance
+		swiper.update()
+	}
 })()

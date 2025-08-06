@@ -59,6 +59,7 @@
 .language-selector {
 	font-family: 'namu';
 	color: var(--dark-mode-text);
+	font-size: 20px;
 }
 
 .language__list {
@@ -73,28 +74,30 @@
 .selected__language {
 	padding: 0 5px;
 }
-.language-selector:hover .language__list {
-	opacity: 1;
-	overflow: visible;
-}
+
 .language-selector img {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 .language-selector span {
 	width: 15px;
+}
+.language-selector li span {
+	width: 30px;
 }
 .selected__language,
 .language-selector li {
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	height: 20px;
+	height: 30px;
 }
 .language-selector li {
 	padding: 5px;
 	transition: var(--transition);
 	border-radius: 3px;
+	max-width: 100px;
+	width: 100%;
 }
 .language-selector li:hover {
 	background: var(--accent-color);
