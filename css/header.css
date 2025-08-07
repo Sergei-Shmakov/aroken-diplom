@@ -64,12 +64,18 @@
 
 .language__list {
 	position: absolute;
+	pointer-events: none;
 	background: #111;
 	border-radius: 3px;
 	z-index: 11;
 	opacity: 0;
-	overflow: hidden;
+	visibility: hidden;
 	transition: var(--transition);
+}
+.language__list--active{
+	pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
 }
 .selected__language {
 	padding: 0 5px;
@@ -102,6 +108,13 @@
 .language-selector li:hover {
 	background: var(--accent-color);
 }
+.language-selector__menu,
+.menu__number {
+	align-self: center;
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+}
 .busket {
 	background: var(--general-text);
 	position: relative;
@@ -128,7 +141,7 @@
 .opened-menu {
 	position: absolute;
 	background: var(--general-text);
-	overflow: hidden;
+	visibility: hidden;
 	opacity: 0;
 	height: auto;
 	transition: var(--transition);
@@ -138,8 +151,11 @@
 	width: 100%;
 }
 .body--opened-menu .opened-menu {
-	overflow: visible;
+	visibility: visible;
 	opacity: 1;
+}
+.body--opened-menu .menu-nav__item {
+	pointer-events: auto;
 }
 
 .menu-nav {
@@ -158,6 +174,7 @@
 	gap: 20px 20px;
 }
 .menu-nav__item {
+	c
 	display: flex;
 	gap: 15px;
 	justify-content: center;
@@ -165,7 +182,7 @@
 .language-selector__menu,
 .menu__number {
 	align-self: center;
-	overflow: hidden;
+	visibility: hidden;
 	opacity: 0;
 	position: absolute;
 }

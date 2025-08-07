@@ -34,11 +34,9 @@
 		})
 		document.addEventListener('click', function (e) {
 			if (!languageSelector.contains(e.target)) {
-				languageDropdown.style.overflow = 'hidden'
-				languageDropdown.style.opacity = '0'
+				languageDropdown.classList.remove('language__list--active')
 			} else {
-				languageDropdown.style.overflow = 'visible'
-				languageDropdown.style.opacity = '1'
+				languageDropdown.classList.add('language__list--active')
 			}
 		})
 	}
@@ -191,71 +189,16 @@
 	}
 
 	//cards
-	document.addEventListener('DOMContentLoaded', () => {
-		const numberInputs = document.querySelectorAll('.card-form__input')
-
-		numberInputs.forEach(container => {
-			const decrementBtn = container.querySelector('.input-decrement')
-			const incrementBtn = container.querySelector('.input-increment')
-			const input = container.querySelector('input[type="number"]')
-
-			const updateButtons = () => {
-				const min = parseInt(input.min) || 0
-				decrementBtn.disabled = parseInt(input.value) <= min
-			}
-
-			decrementBtn.addEventListener('click', e => {
-				e.preventDefault()
-				const min = parseInt(input.min) || 0
-				const current = parseInt(input.value) || min
-				input.value = Math.max(min, current - 1)
-				updateButtons()
-			})
-
-			incrementBtn.addEventListener('click', e => {
-				e.preventDefault()
-				const current = parseInt(input.value) || 0
-				input.value = current + 1
-				updateButtons()
-			})
-
-			input.addEventListener('input', updateButtons)
-			updateButtons()
-		})
-	})
-	document.addEventListener('DOMContentLoaded', function () {
-		const list = document.querySelector('.product-cards-list')
-		const cards = Array.from(list.children)
-
-		const filterItems = document.querySelectorAll('.filter__list_item')
-
-		filterItems.forEach(filterItem => {
-			filterItem.addEventListener('click', () => {
-				const order = filterItem.getAttribute('data-sort') // "asc" or "desc"
-
-				const sortedCards = [...cards].sort((a, b) => {
-					const priceA = parseInt(a.dataset.price, 10)
-					const priceB = parseInt(b.dataset.price, 10)
-
-					return order === 'asc' ? priceA - priceB : priceB - priceA
-				})
-
-				// Очистка и вставка отсортированных карточек
-				list.innerHTML = ''
-				sortedCards.forEach(card => list.appendChild(card))
-			})
-		})
-	})
 
 	//свайпер карточек
 	const swiper = new Swiper('.product-card__inner', {
 		loop: false,
-		slidesPerView: 3,
+		slidesPerView: 1,
 
 		grid: {
 			rows: 2,
 		},
-		spaceBetween: 20,
+		spaceBetween: 10,
 		pagination: {
 			type: 'fraction',
 			el: '.card-pagination',
@@ -263,6 +206,17 @@
 		navigation: {
 			nextEl: '.card-next',
 			prevEl: '.card-prev',
+		},
+		breakpoints: {
+			401: {
+				slidesPerView: 2,
+			},
+			601: {
+				slidesPerView: 3,
+			},
+			1101: {
+				spaceBetween: 20,
+			},
 		},
 	})
 	document.addEventListener('DOMContentLoaded', () => {

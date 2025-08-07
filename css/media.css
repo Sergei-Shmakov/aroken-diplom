@@ -20,21 +20,13 @@
 	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.product-cards-list__item {
-		max-width: 31.3vw;
-		min-height: 340px;
-	}
-	.card-img__picture {
-		max-width: 31.3vw;
-		height: auto;
-	}
+
 	.card__title {
 		font-size: 22px;
-		padding: 2.8vw 2.8vw 1.8vw;
-		max-height: 12.6vw;
+		margin: 2.8vw 2.8vw 1.8vw;
 	}
 	.card-price {
-		padding: 0 2.8vw;
+		margin: 0 2.8vw;
 	}
 	.card-price__now {
 		font-size: 38px;
@@ -42,6 +34,13 @@
 	.card-form__input,
 	.in-bascet {
 		height: 4.6vw;
+	}
+	.selected__filter {
+		padding: 0.5vw 1vw;
+		gap: 0.5vw;
+	}
+	.filter__list__item span {
+		padding: 0 1vw;
 	}
 }
 @media (max-width: 1300px) {
@@ -84,7 +83,8 @@
 	/* ================================================================================ */
 	.advantages,
 	.accordion,
-	.news {
+	.news,
+	.special-offers {
 		padding: 11.5vw 0;
 	}
 	.advantages__title {
@@ -127,17 +127,27 @@
 		min-width: 220px;
 		margin-top: 3vw;
 	}
-	.show-more__text {
+	.show-more__text,
+	.card__title {
 		font-size: 20px;
 	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.card__title {
-		font-size: 20px;
+	.special-offers__title {
+		padding-bottom: 4vw;
 	}
 	.card-price__now {
 		font-size: 34px;
 	}
+	.card-price__stock {
+		margin-left: 2vw;
+		font-size: 16px;
+	}
+
+	.swiper_comunication {
+		margin-top: 10vw;
+	}
+
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.feedback {
@@ -169,23 +179,28 @@
 @media (max-width: 1200px) {
 	.card__title {
 		font-size: 20px;
-		padding: 2.5vw 2.5vw 1.5vw;
+		margin: 2.5vw 2.5vw 1.5vw;
 	}
 	.card-price {
-		padding: 0 2.5vw;
+		margin: 0 2.5vw;
 	}
 	.card-price__now {
 		font-size: 30px;
+	}
+	.card-price__stock {
+		font-size: 15px;
 	}
 	.card-form__input,
 	.in-bascet {
 		height: 4.6vw;
 	}
+	.card-prev,
+	.card-next {
+		width: 54px;
+		height: 54px;
+	}
 }
 @media (max-width: 1100px) {
-	.button {
-		font-size: 22px;
-	}
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.promo__inner {
@@ -209,7 +224,8 @@
 	.advantages__title,
 	.accordion-title,
 	.sale__title,
-	.news__title {
+	.news__title,
+	.special-offers__title {
 		font-size: 36px;
 	}
 	/* ================================================================================ */
@@ -223,7 +239,12 @@
 	.new__text,
 	.new__link,
 	.subitle,
-	.accordion__item-text {
+	.accordion__item-text,
+	.airwrap__subitle,
+	.feedback__input::placeholder,
+	.keywords-list__button,
+	.filter-text,
+	.filter__list__item span {
 		font-size: 16px;
 	}
 
@@ -235,38 +256,55 @@
 	.airwrap-text__inner h3 {
 		font-size: 38px;
 	}
-	.airwrap__title {
+	.airwrap__title,
+	.card-price__before,
+	.button,
+	.card-pagination {
 		font-size: 22px;
 	}
-	.airwrap__subitle {
-		font-size: 16px;
-	}
+
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.product-cards-list {
-		gap: 10px;
+		max-height: 115vmin;
+	}
+	.product-cards-list__item {
+		margin-bottom: 10px;
 	}
 	.card__title {
 		font-size: 18px;
+		max-height: 15%;
 	}
 
 	.card-price__now {
 		font-size: 26px;
-	}
-	.card-price__stock {
-		padding-left: 3vw;
-		font-size: 16px;
+		margin: 10px 0 20px 0;
 	}
 	.card-price__sale {
-		height: 4vw;
-		font-size: 20px;
+		height: 3vw;
+		font-size: 18px;
+		max-width: 90px;
+	}
+	.card-price__stock {
+		margin-left: 1.5vw;
+	}
+	.card-price__stock::before {
+		width: 9px;
+		height: 9px;
+		left: -15%;
 	}
 
-	.card-price__before {
-		font-size: 22px;
-	}
-	.in-bascet {
+	.in-bascet,
+	.feedback__button {
 		font-size: 20px;
+	}
+	.filter-selector,
+	.selected__filter,
+	.filter__list {
+		max-width: 220px;
+	}
+	.filter__list__item {
+		max-height: 50px;
 	}
 
 	/* ================================================================================ */
@@ -287,12 +325,6 @@
 	.feedback__legend {
 		font-size: 32px;
 	}
-	.feedback__input::placeholder {
-		font-size: 16px;
-	}
-	.feedback__button {
-		font-size: 20px;
-	}
 	.feedback__checkbox span {
 		font-size: 14px;
 	}
@@ -306,7 +338,9 @@
 }
 
 @media (max-width: 1000px) {
-	.button {
+	.button,
+	.card-form__input input[type='number'],
+	.card-pagination {
 		font-size: 20px;
 	}
 	/* ================================================================================ */
@@ -343,26 +377,27 @@
 	.item__title,
 	.accordion__item-title,
 	.new__title,
-	.show-more__text {
+	.show-more__text,
+	.in-bascet,
+	.card-price__before,
+	.feedback__button {
 		font-size: 18px;
 	}
-	.item__subtitle {
+	.item__subtitle,
+	.subitle,
+	.airwrap__subitle {
 		font-size: 16px;
 	}
 
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.subitle {
-		font-size: 16px;
-	}
+
 	.sale__title,
 	.accordion-title,
 	.news__title {
 		font-size: 32px;
 	}
-	.sale__title b {
-		font-size: 48px;
-	}
+	.sale__title b,
 	.sale__title b mark {
 		font-size: 48px;
 	}
@@ -372,9 +407,58 @@
 	.airwrap__title {
 		font-size: 22px;
 	}
-	.airwrap__subitle {
-		font-size: 16px;
+
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.product-cards-list {
+		max-height: 90vmax;
 	}
+	.card-img {
+		max-width: 300px;
+	}
+	.product-cards-list__item {
+		max-width: 300px;
+		margin-bottom: 10px;
+	}
+	.card__title {
+		font-size: 16px;
+		max-height: 15%;
+	}
+
+	.card-price__now {
+		font-size: 22px;
+		margin: 10px 0 20px 0;
+	}
+	.card-price__sale {
+		height: 3vw;
+		font-size: 16px;
+		max-width: 90px;
+	}
+	.card-price__stock {
+		font-size: 14px;
+		margin-left: 1.5vw;
+	}
+	.card-price__stock::before {
+		width: 9px;
+		height: 9px;
+		left: -15%;
+	}
+	.filter-selector,
+	.selected__filter,
+	.filter__list {
+		max-width: 210px;
+	}
+	.card-prev,
+	.card-next {
+		width: 44px;
+		height: 44px;
+	}
+	.card-prev svg,
+	.card-next svg {
+		width: 28px;
+		height: 28px;
+	}
+
 	/* ================================================================================ */
 	/* ================================================================================ */
 
@@ -393,9 +477,7 @@
 	.feedback__legend {
 		font-size: 28px;
 	}
-	.feedback__button {
-		font-size: 18px;
-	}
+
 	.checkbox {
 		min-width: 24px;
 		min-height: 24px;
@@ -405,7 +487,8 @@
 	}
 }
 @media (max-width: 900px) {
-	.button {
+	.button,
+	.card-pagination {
 		font-size: 18px;
 	}
 	/* ================================================================================ */
@@ -417,7 +500,14 @@
 	.new__data,
 	.new__text,
 	.new__link,
-	.promo__subtitle {
+	.promo__subtitle,
+	.subitle,
+	.accordion__item-text,
+	.item__subtitle,
+	.feedback__input::placeholder,
+	.keywords-list__button,
+	.filter-text,
+	.filter__list__item span {
 		font-size: 14px;
 	}
 	.promo-video__inner {
@@ -425,18 +515,13 @@
 	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.subitle,
-	.accordion__item-text {
-		font-size: 14px;
-	}
+
 	.sale__title,
 	.accordion-title,
 	.news__title {
 		font-size: 28px;
 	}
-	.sale__title b {
-		font-size: 40px;
-	}
+	.sale__title b,
 	.sale__title b mark {
 		font-size: 40px;
 	}
@@ -446,16 +531,72 @@
 	.item__title,
 	.accordion__item-title,
 	.new__title,
-	.show-more__text {
+	.show-more__text,
+	.card-price__before {
 		font-size: 16px;
-	}
-	.item__subtitle {
-		font-size: 14px;
 	}
 	.advantages-list__item svg {
 		max-width: 60px;
 		max-height: 60px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.product-cards-list {
+		max-height: 81vmax;
+	}
+	.card-img {
+		max-width: 280px;
+	}
+	.product-cards-list__item {
+		max-width: 280px;
+		margin-bottom: 10px;
+	}
+	.card__title {
+		font-size: 14px;
+		max-height: 15%;
+	}
+
+	.card-price__now {
+		font-size: 20px;
+		margin: 10px 0 20px 0;
+	}
+	.card-price__sale {
+		height: 3vw;
+		font-size: 12px;
+		max-width: 90px;
+	}
+	.card-price__stock {
+		font-size: 12px;
+		margin-left: 1.5vw;
+	}
+	.card-price__stock::before {
+		width: 9px;
+		height: 9px;
+		left: -15%;
+	}
+
+	.card-form {
+		grid-template-columns: 1fr;
+	}
+	.in-bascet {
+		font-size: 16px;
+		max-width: 100%;
+		height: 50px;
+	}
+	.card-form__input {
+		display: none;
+	}
+	.card-prev,
+	.card-next {
+		width: 40px;
+		height: 40px;
+	}
+	.card-prev svg,
+	.card-next svg {
+		width: 26px;
+		height: 26px;
+	}
+
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.accordion__item {
@@ -481,9 +622,6 @@
 	.feedback__legend {
 		font-size: 24px;
 	}
-	.feedback__input::placeholder {
-		font-size: 14px;
-	}
 	.feedback__checkbox span {
 		font-size: 12px;
 	}
@@ -496,7 +634,9 @@
 	}
 }
 @media (max-width: 800px) {
-	.button {
+	.button,
+	.airwrap__title,
+	.card-pagination {
 		font-size: 16px;
 	}
 	/* ================================================================================ */
@@ -524,7 +664,8 @@
 		font-size: 30px;
 	}
 	.promo__subtitle,
-	.new__title {
+	.new__title,
+	.item__title {
 		font-size: 14px;
 	}
 	/* ================================================================================ */
@@ -533,45 +674,91 @@
 	.new__data,
 	.new__text,
 	.new__link,
-	.subitle {
+	.subitle,
+	.airwrap__subitle,
+	.item__subtitle,
+	.card__title,
+	.card-price__before,
+	.feedback__input::placeholder,
+	.keywords-list__button,
+	.filter-text,
+	.filter__list__item span {
 		font-size: 12px;
 	}
 	.sale__title,
 	.accordion-title,
-	.news__title {
+	.news__title,
+	.airwrap-text__inner h3 {
 		font-size: 26px;
 	}
-	.sale__title b {
-		font-size: 36px;
-	}
+	.sale__title b,
 	.sale__title b mark {
 		font-size: 36px;
 	}
+
 	.group-img__inner {
 		justify-items: end;
 	}
 
-	.airwrap-text__inner h3 {
-		font-size: 26px;
-	}
-	.airwrap__title {
-		font-size: 16px;
-	}
-	.airwrap__subitle {
-		font-size: 12px;
-	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.item__title {
-		font-size: 14px;
-	}
-	.item__subtitle {
-		font-size: 12px;
-	}
 	.advantages-list__item svg {
 		max-width: 50px;
 		max-height: 50px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.product-cards-list {
+		max-height: 90vmax;
+	}
+	.product-cards-list__item,
+	.card-img {
+		max-width: 230px;
+	}
+
+	.card-price__now,
+	.feedback__legend {
+		font-size: 20px;
+	}
+
+	.card-price__stock,
+	.feedback__checkbox span {
+		font-size: 10px;
+	}
+	.card-price__stock::before {
+		width: 7px;
+		height: 7px;
+	}
+
+	.in-bascet {
+		font-size: 16px;
+		max-width: 100%;
+		height: 40px;
+	}
+	.filter-selector,
+	.selected__filter {
+		max-width: 180px;
+		max-height: 30px;
+	}
+
+	.filter-selector {
+		top: -50px;
+	}
+	.selected__filter {
+		padding: 0 15px;
+	}
+	.card-prev,
+	.card-next {
+		width: 36px;
+		height: 36px;
+	}
+	.card-prev svg,
+	.card-next svg {
+		width: 24px;
+		height: 24px;
+	}
+	/* ================================================================================ */
+	/* ================================================================================ */
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.news__title {
@@ -595,19 +782,11 @@
 	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.feedback__legend {
-		font-size: 20px;
-	}
-	.feedback__input::placeholder {
-		font-size: 12px;
-	}
+
 	.feedback__button {
 		font-size: 14px;
 		margin-top: 2vw;
 		max-height: 36px;
-	}
-	.feedback__checkbox span {
-		font-size: 10px;
 	}
 	.checkbox {
 		min-width: 20px;
@@ -645,7 +824,6 @@
 	/* =================================================================== */
 	.promo__inner {
 		grid-template-columns: 1fr;
-		/* grid-template-rows: repeat(2, 1fr); */
 		justify-items: center;
 		text-align: center;
 		height: auto;
@@ -655,7 +833,8 @@
 		justify-self: center;
 		align-self: center;
 	}
-	.promo__img img {
+	.promo__img img,
+	.airwrap__img img {
 		position: relative;
 	}
 	.promo-video__text {
@@ -704,9 +883,7 @@
 		justify-self: center;
 		padding-top: 15px;
 	}
-	.airwrap__img img {
-		position: relative;
-	}
+
 	.airwrap-group-text {
 		padding-right: 0;
 	}
@@ -715,7 +892,8 @@
 	}
 	/* ================================================================================ */
 	/* ================================================================================ */
-	.advantages__title {
+	.advantages__title,
+	.special-offers__title {
 		font-size: 30px;
 	}
 	.advantages-list {
@@ -744,6 +922,38 @@
 		max-width: 70px;
 		max-height: 70px;
 	}
+	/* ================================================================================ */
+	/* ================================================================================ */
+	.product-cards-list {
+		max-height: 120vmax;
+		justify-items: center;
+	}
+	.product-cards-list__item {
+		max-width: 200px;
+		min-height: 370px;
+	}
+	.card__link {
+		min-height: 310px;
+	}
+	.card-img {
+		max-width: 200px;
+	}
+	.card__title {
+		font-size: 10px;
+		max-height: 12%;
+	}
+	.card-price__sale {
+		max-width: 60px;
+		min-height: 20px;
+	}
+	.card-price__stock {
+		font-size: 9px;
+	}
+
+	.card-price__now {
+		font-size: 18px;
+	}
+
 	/* ================================================================================ */
 	/* ================================================================================ */
 	.accordion-plus-button {
@@ -798,7 +1008,22 @@
 	/* ========================================================================== */
 
 	/* ========================================================================== */
-	.advantages__title {
+	.product-cards-list {
+		max-height: 60vmax;
+		justify-items: center;
+	}
+	.product-cards-list__item {
+		max-width: 250px;
+	}
+	.card__link {
+		padding: 0 10%;
+	}
+
+	/* ========================================================================== */
+
+	/* ========================================================================== */
+	.advantages__title,
+	.special-offers__title {
 		font-size: 26px;
 	}
 	.advantages-list__item svg {
@@ -840,7 +1065,8 @@
 	/* =============================================================================== */
 	/* =============================================================================== */
 	.subitle,
-	.accordion__item-text {
+	.accordion__item-text,
+	.item__subtitle {
 		font-size: 12px;
 	}
 	.sale__title,
@@ -848,22 +1074,25 @@
 	.news__title {
 		font-size: 24px;
 	}
-	.sale__title b {
-		font-size: 30px;
-	}
+	.sale__title b,
 	.sale__title b mark {
 		font-size: 30px;
 	}
+
 	.airwrap-text__inner h3 {
 		font-size: 24px;
 	}
-	.airwrap__title {
+	.airwrap__title,
+	.item__title,
+	.accordion__item-title,
+	.show-more__text {
 		font-size: 14px;
 	}
 	/* =============================================================================== */
 	/* =============================================================================== */
 	.advantages__title,
-	.news__title {
+	.news__title,
+	.special-offers__title {
 		font-size: 23px;
 	}
 	.advantages-list__item {
@@ -873,13 +1102,16 @@
 		max-width: 50px;
 		max-height: 50px;
 	}
-	.item__title,
-	.accordion__item-title {
-		font-size: 14px;
+
+	/* =============================================================================== */
+	/* =============================================================================== */
+	.card__link {
+		padding: 0 0;
 	}
-	.item__subtitle {
-		font-size: 12px;
+	.card-price__stock {
+		margin-left: 15px;
 	}
+
 	/* =============================================================================== */
 	/* =============================================================================== */
 
@@ -908,9 +1140,6 @@
 		min-width: 160px;
 		padding: 5px;
 		justify-content: space-around;
-	}
-	.show-more__text {
-		font-size: 14px;
 	}
 	.show__more svg {
 		max-width: 15px;
@@ -968,11 +1197,23 @@
 	/* =============================================================================== */
 	.advantages__title,
 	.accordion-title,
-	.news__title {
+	.news__title,
+	.special-offers__title {
 		font-size: 20px;
 	}
 	.advantages-list__item {
 		height: 40vw;
+	}
+	/* =============================================================================== */
+	/* =============================================================================== */
+	.product-cards-list {
+		max-height: 60vmax;
+	}
+	.card__link {
+		padding: 0 10%;
+	}
+	.swiper_comunication {
+		justify-content: center;
 	}
 	/* =============================================================================== */
 	/* =============================================================================== */
