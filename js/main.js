@@ -354,12 +354,38 @@
 			reorderDom(newOrder)
 		}
 		const filterList = document.getElementById('filter__list')
+		let currentSortType = 'popular'
 		if (filterList) {
 			filterList.addEventListener('click', e => {
 				const item = e.target.closest('li[data-sort]')
 				if (!item) return
 				const sortType = item.dataset.sort
-				sortProducts(sortType)
+				if (currentSortType === sortType) {
+					sortProducts('popular')
+					currentSortType = 'popular'
+					// reset UI active to popular
+					const filterSelector = document.querySelector('.filter-selector')
+					if (filterSelector) {
+						const selectedFilter = filterSelector.querySelector('.selected__filter')
+						const filterDropdown = filterSelector.querySelector('.filter__list')
+						if (selectedFilter && filterDropdown) {
+							const nowActive = filterDropdown.querySelector('.filter__list__item--active')
+							const popularItem = filterDropdown.querySelector('li[data-sort="popular"]')
+							if (nowActive && nowActive !== popularItem) {
+								nowActive.classList.remove('filter__list__item--active')
+							}
+							if (popularItem) {
+								popularItem.classList.add('filter__list__item--active')
+								const popularText = popularItem.querySelector('span')?.textContent || ''
+								const filterTextNode = selectedFilter.querySelector('.filter-text')
+								if (filterTextNode) filterTextNode.textContent = popularText
+							}
+						}
+					}
+				} else {
+					sortProducts(sortType)
+					currentSortType = sortType
+				}
 			})
 		}
 	})
@@ -383,22 +409,7 @@
 		// Swiper-based filtering setup
 		const productList = document.querySelector('.product-cards-list')
 		const allSlides = productList ? Array.from(productList.children) : []
-
-		tabControls.addEventListener('click', toggleTab)
-
-		function toggleTab(event) {
-			const tabControl = event.target.closest('.keywords-list__item')
-			if (!tabControl) return
-			event.preventDefault()
-
-			const activeControl = document.querySelector(
-				'.keywords-list__item--active'
-			)
-			if (activeControl) {
-				activeControl.classList.remove('keywords-list__item--active')
-			}
-			tabControl.classList.add('keywords-list__item--active')
-		}
+		let currentTabId = null
 
 		function rebuildSwiperWithSlides(slides) {
 			if (!productList) return
@@ -411,23 +422,38 @@
 			updateSwiperFraction()
 		}
 
-		function filterTabs() {
+		function handleTabs() {
+			if (!tabControls) return
 			tabControls.addEventListener('click', e => {
-				let target = e.target
+				const button = e.target.closest('.keywords-list__button')
+				if (!button || !tabControls.contains(button)) return
+				e.preventDefault()
+				const li = button.closest('.keywords-list__item')
+				const itemId = button.dataset.id
+				if (!itemId) return
 
-				while (target && target !== tabControls && !target.dataset.id) {
-					target = target.parentElement
+				if (currentTabId === itemId) {
+					currentTabId = null
+					li.classList.remove('keywords-list__item--active')
+					rebuildSwiperWithSlides(allSlides)
+					return
 				}
 
-				if (target && target.dataset.id) {
-					const itemId = target.dataset.id
-					const filtered = allSlides.filter(slide =>
-						slide.classList.contains(itemId)
-					)
-					rebuildSwiperWithSlides(filtered)
+				currentTabId = itemId
+				const activeControl = tabControls.querySelector(
+					'.keywords-list__item--active'
+				)
+				if (activeControl && activeControl !== li) {
+					activeControl.classList.remove('keywords-list__item--active')
 				}
+				li.classList.add('keywords-list__item--active')
+
+				const filtered = allSlides.filter(slide =>
+					slide.classList.contains(itemId)
+				)
+				rebuildSwiperWithSlides(filtered)
 			})
 		}
-		filterTabs()
+		handleTabs()
 	})
 })()
