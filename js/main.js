@@ -222,56 +222,151 @@
 		})
 	})
 
-	//свайпер карточек
-	const swiper = new Swiper('.product-card__inner', {
-		loop: false,
-		slidesPerView: 3,
+	//свайпер карточек + сортировка
+	let cardsSwiper = null
 
-		grid: {
-			rows: 2,
-		},
-		spaceBetween: 20,
-		pagination: {
-			type: 'fraction',
-			el: '.card-pagination',
-		},
-		navigation: {
-			nextEl: '.card-next',
-			prevEl: '.card-prev',
-		},
-		breakpoints: {
-			301: {
-				slidesPerView: 1,
+	function initCardsSwiper() {
+		cardsSwiper = new Swiper('.product-card__inner', {
+			loop: false,
+			slidesPerView: 3,
+			grid: {
+				rows: 2,
 			},
-			401: {
-				slidesPerView: 2,
+			spaceBetween: 20,
+			pagination: {
+				type: 'fraction',
+				el: '.card-pagination',
 			},
-			601: {
-				slidesPerView: 3,
+			navigation: {
+				nextEl: '.card-next',
+				prevEl: '.card-prev',
 			},
-			1101: {
-				spaceBetween: 20,
+			breakpoints: {
+				301: { slidesPerView: 1 },
+				401: { slidesPerView: 2 },
+				601: { slidesPerView: 3 },
+				1101: { spaceBetween: 20 },
 			},
-		},
-	})
-	document.addEventListener('DOMContentLoaded', () => {
+		})
+		updateSwiperFraction()
+	}
+
+	function updateSwiperFraction() {
 		const pagination = document.querySelector(
 			'.card-pagination.swiper-pagination-fraction'
 		)
-
 		if (pagination) {
 			const nodes = pagination.childNodes
-
 			nodes.forEach(node => {
-				if (
-					node.nodeType === Node.TEXT_NODE &&
-					node.textContent.includes('/')
-				) {
+				if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('/')) {
 					node.textContent = ' из '
 				}
 			})
 		}
+	}
+
+	function extractDigits(value) {
+		if (!value) return 0
+		const text = String(value).replace(/\s|\u00A0/g, '')
+		const match = text.match(/-?\d+/)
+		return match ? Math.abs(parseInt(match[0])) : 0
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const productList = document.querySelector('.product-cards-list')
+		if (!productList) return
+
+		// Cache the initial order for "popular"
+		const initialOrder = Array.from(productList.children)
+
+		initCardsSwiper()
+
+		const getCardPrice = card => {
+			const datasetPrice = parseInt(card.dataset.price)
+			if (!Number.isNaN(datasetPrice)) return datasetPrice
+			const priceNode = card.querySelector('.card-price__now')
+			return extractDigits(priceNode ? priceNode.textContent : '0')
+		}
+
+		const getCardSale = card => {
+			const datasetSale = card.dataset.sale
+			if (datasetSale != null) return extractDigits(datasetSale)
+			const saleNode = card.querySelector('.card-price__sale')
+			return extractDigits(saleNode ? saleNode.textContent : '0')
+		}
+
+		const getCardStock = card => {
+			const datasetStock = card.dataset.stock
+			if (datasetStock) return datasetStock
+			const soldOut = card.querySelector('.card-price__stock--soldout')
+			return soldOut ? 'no-stock' : 'in-stock'
+		}
+
+		const reorderDom = newOrderNodes => {
+			// Destroy and re-init Swiper around DOM reorder
+			if (cardsSwiper) {
+				cardsSwiper.destroy(true, true)
+				cardsSwiper = null
+			}
+			newOrderNodes.forEach(node => productList.appendChild(node))
+			initCardsSwiper()
+		}
+
+		const sortProducts = sortType => {
+			if (sortType === 'popular') {
+				reorderDom(initialOrder)
+				return
+			}
+
+			const indexed = Array.from(productList.children).map((el, idx) => ({
+				el,
+				index: initialOrder.indexOf(el),
+				price: getCardPrice(el),
+				sale: getCardSale(el),
+				stock: getCardStock(el),
+			}))
+
+			let comparator = null
+			switch (sortType) {
+				case 'asc':
+					comparator = (a, b) => a.price - b.price || a.index - b.index
+					break
+				case 'desc':
+					comparator = (a, b) => b.price - a.price || a.index - b.index
+					break
+				case 'sale':
+					comparator = (a, b) => b.sale - a.sale || a.index - b.index
+					break
+				case 'stock':
+					// in-stock first, keep initial order inside groups
+					comparator = (a, b) => {
+						const aRank = a.stock === 'in-stock' ? 0 : 1
+						const bRank = b.stock === 'in-stock' ? 0 : 1
+						return aRank - bRank || a.index - b.index
+					}
+					break
+				default:
+					return
+			}
+
+			indexed.sort(comparator)
+			const newOrder = indexed.map(x => x.el)
+			reorderDom(newOrder)
+		}
+
+		// Bind filter click without changing existing dropdown code
+		const filterList = document.getElementById('filter__list')
+		if (filterList) {
+			filterList.addEventListener('click', e => {
+				const item = e.target.closest('li[data-sort]')
+				if (!item) return
+				const sortType = item.dataset.sort
+				sortProducts(sortType)
+			})
+		}
 	})
+
+	// сохранена логика переключателя темы
 	document.addEventListener('DOMContentLoaded', () => {
 		const themeSwitcher = document.querySelector('.theme-mode')
 
