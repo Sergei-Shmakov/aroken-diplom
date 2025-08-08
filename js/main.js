@@ -380,7 +380,6 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		const tabControls = document.querySelector('.keywords-list')
 
-		// Swiper-based filtering setup
 		const productList = document.querySelector('.product-cards-list')
 		const allSlides = productList ? Array.from(productList.children) : []
 
