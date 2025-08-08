@@ -233,9 +233,6 @@
 				rows: 2,
 			},
 			spaceBetween: 20,
-			observer: true,
-			observeParents: true,
-			watchOverflow: true,
 			pagination: {
 				type: 'fraction',
 				el: '.card-pagination',
@@ -250,11 +247,6 @@
 				601: { slidesPerView: 3 },
 				1101: { spaceBetween: 20 },
 			},
-			on: {
-				init: updateSwiperFraction,
-				paginationRender: updateSwiperFraction,
-				paginationUpdate: updateSwiperFraction,
-			},
 		})
 		updateSwiperFraction()
 	}
@@ -266,7 +258,10 @@
 		if (pagination) {
 			const nodes = pagination.childNodes
 			nodes.forEach(node => {
-				if (node.nodeType === Node.TEXT_NODE && node.textContent.includes('/')) {
+				if (
+					node.nodeType === Node.TEXT_NODE &&
+					node.textContent.includes('/')
+				) {
 					node.textContent = ' из '
 				}
 			})
@@ -284,7 +279,6 @@
 		const productList = document.querySelector('.product-cards-list')
 		if (!productList) return
 
-		// Cache the initial order for "popular"
 		const initialOrder = Array.from(productList.children)
 
 		initCardsSwiper()
@@ -311,7 +305,6 @@
 		}
 
 		const reorderDom = newOrderNodes => {
-			// Destroy and re-init Swiper around DOM reorder
 			if (cardsSwiper) {
 				cardsSwiper.destroy(true, true)
 				cardsSwiper = null
@@ -346,7 +339,6 @@
 					comparator = (a, b) => b.sale - a.sale || a.index - b.index
 					break
 				case 'stock':
-					// in-stock first, keep initial order inside groups
 					comparator = (a, b) => {
 						const aRank = a.stock === 'in-stock' ? 0 : 1
 						const bRank = b.stock === 'in-stock' ? 0 : 1
@@ -361,8 +353,6 @@
 			const newOrder = indexed.map(x => x.el)
 			reorderDom(newOrder)
 		}
-
-		// Bind filter click without changing existing dropdown code
 		const filterList = document.getElementById('filter__list')
 		if (filterList) {
 			filterList.addEventListener('click', e => {
@@ -374,7 +364,6 @@
 		}
 	})
 
-	// сохранена логика переключателя темы
 	document.addEventListener('DOMContentLoaded', () => {
 		const themeSwitcher = document.querySelector('.theme-mode')
 
@@ -385,5 +374,77 @@
 				themeSwitcher.classList.add('theme-mode--dark')
 			}
 		})
+	})
+
+	//tab
+	document.addEventListener('DOMContentLoaded', () => {
+		const tabControls = document.querySelector('.keywords-list')
+
+		tabControls.addEventListener('click', toggleTab)
+
+		function toggleTab(event) {
+			const tabControl = event.target.closest('.keywords-list__item')
+			if (!tabControl) return
+			event.preventDefault()
+
+			const activeControl = document.querySelector(
+				'.keywords-list__item--active'
+			)
+			if (activeControl) {
+				activeControl.classList.remove('keywords-list__item--active')
+			}
+			tabControl.classList.add('keywords-list__item--active')
+		}
+
+		const items = document.querySelectorAll('.product-cards-list')
+
+		function filterTabs() {
+			tabControls.addEventListener('click', e => {
+				let target = e.target
+
+				while (target && target !== tabControls && !target.dataset.id) {
+					target = target.parentElement
+				}
+
+				if (target && target.dataset.id) {
+					const itemId = target.dataset.id
+
+					switch (itemId) {
+						case 'vacuum-cleaner-Tab':
+							getItems(itemId)
+							break
+						case 'hairdryer-Tab':
+							getItems(itemId)
+							break
+						case 'topaz-Tab':
+							getItems(itemId)
+							break
+						case 'hd07-Tab':
+							getItems(itemId)
+							break
+						case 'purifier-Tab':
+							getItems(itemId)
+							break
+						case 'styler-Tab':
+							getItems(itemId)
+							break
+						case 'hs05-Tab':
+							getItems(itemId)
+							break
+					}
+				}
+			})
+		}
+		filterTabs()
+
+		function getItems(tabName) {
+			items.forEach(item => {
+				if (item.classList.contains(tabName)) {
+					item.style.display = 'block'
+				} else {
+					item.style.display = 'none'
+				}
+			})
+		}
 	})
 })()

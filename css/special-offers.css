@@ -10,6 +10,10 @@
 	position: relative;
 	margin-bottom: 140px;
 }
+.keywords-list__item {
+	margin-top: 7px;
+}
+
 .keywords-list {
 	max-height: 40px;
 	max-width: 1250px;
@@ -19,6 +23,11 @@
 	overflow: hidden;
 	transition: var(--transition);
 	gap: 20px;
+	padding-bottom: 7px;
+}
+.keywords-list__item--active .keywords-list__button {
+	border: 1px solid var(--accent-color);
+	color: var(--accent-color);
 }
 .keywords-list__button {
 	background: var(--general-bg);
@@ -255,6 +264,7 @@
 	align-items: center;
 	flex-shrink: 0;
 	color: var(--general-bg);
+	background: var(--general-text);
 	font-size: 24px;
 }
 .in-bascet:hover {
