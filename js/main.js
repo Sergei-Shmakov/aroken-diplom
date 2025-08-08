@@ -233,6 +233,9 @@
 				rows: 2,
 			},
 			spaceBetween: 20,
+			observer: true,
+			observeParents: true,
+			watchOverflow: true,
 			pagination: {
 				type: 'fraction',
 				el: '.card-pagination',
@@ -246,6 +249,11 @@
 				401: { slidesPerView: 2 },
 				601: { slidesPerView: 3 },
 				1101: { spaceBetween: 20 },
+			},
+			on: {
+				init: updateSwiperFraction,
+				paginationRender: updateSwiperFraction,
+				paginationUpdate: updateSwiperFraction,
 			},
 		})
 		updateSwiperFraction()
