@@ -380,6 +380,10 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		const tabControls = document.querySelector('.keywords-list')
 
+		// Swiper-based filtering setup
+		const productList = document.querySelector('.product-cards-list')
+		const allSlides = productList ? Array.from(productList.children) : []
+
 		tabControls.addEventListener('click', toggleTab)
 
 		function toggleTab(event) {
@@ -396,7 +400,16 @@
 			tabControl.classList.add('keywords-list__item--active')
 		}
 
-		const items = document.querySelectorAll('.product-cards-list')
+		function rebuildSwiperWithSlides(slides) {
+			if (!productList) return
+			if (cardsSwiper) {
+				cardsSwiper.destroy(true, true)
+			}
+			productList.innerHTML = ''
+			slides.forEach(slide => productList.appendChild(slide))
+			initCardsSwiper()
+			updateSwiperFraction()
+		}
 
 		function filterTabs() {
 			tabControls.addEventListener('click', e => {
@@ -408,43 +421,13 @@
 
 				if (target && target.dataset.id) {
 					const itemId = target.dataset.id
-
-					switch (itemId) {
-						case 'vacuum-cleaner-Tab':
-							getItems(itemId)
-							break
-						case 'hairdryer-Tab':
-							getItems(itemId)
-							break
-						case 'topaz-Tab':
-							getItems(itemId)
-							break
-						case 'hd07-Tab':
-							getItems(itemId)
-							break
-						case 'purifier-Tab':
-							getItems(itemId)
-							break
-						case 'styler-Tab':
-							getItems(itemId)
-							break
-						case 'hs05-Tab':
-							getItems(itemId)
-							break
-					}
+					const filtered = allSlides.filter(slide =>
+						slide.classList.contains(itemId)
+					)
+					rebuildSwiperWithSlides(filtered)
 				}
 			})
 		}
 		filterTabs()
-
-		function getItems(tabName) {
-			items.forEach(item => {
-				if (item.classList.contains(tabName)) {
-					item.style.display = 'block'
-				} else {
-					item.style.display = 'none'
-				}
-			})
-		}
 	})
 })()
