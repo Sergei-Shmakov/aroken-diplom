@@ -189,16 +189,48 @@
 	}
 
 	//cards
+	document.addEventListener('DOMContentLoaded', () => {
+		const numberInputs = document.querySelectorAll('.card-form__input')
+
+		numberInputs.forEach(container => {
+			const decrementBtn = container.querySelector('.input-decrement')
+			const incrementBtn = container.querySelector('.input-increment')
+			const input = container.querySelector('input[type="number"]')
+
+			const updateButtons = () => {
+				const min = parseInt(input.min) || 0
+				decrementBtn.disabled = parseInt(input.value) <= min
+			}
+
+			decrementBtn.addEventListener('click', e => {
+				e.preventDefault()
+				const min = parseInt(input.min) || 0
+				const current = parseInt(input.value) || min
+				input.value = Math.max(min, current - 1)
+				updateButtons()
+			})
+
+			incrementBtn.addEventListener('click', e => {
+				e.preventDefault()
+				const current = parseInt(input.value) || 0
+				input.value = current + 1
+				updateButtons()
+			})
+
+			input.addEventListener('input', updateButtons)
+			updateButtons()
+		})
+	})
 
 	//свайпер карточек
 	const swiper = new Swiper('.product-card__inner', {
 		loop: false,
-		slidesPerView: 1,
+		slidesPerView: 3,
 
 		grid: {
 			rows: 2,
 		},
-		spaceBetween: 10,
+		spaceBetween: 20,
 		pagination: {
 			type: 'fraction',
 			el: '.card-pagination',
@@ -208,6 +240,9 @@
 			prevEl: '.card-prev',
 		},
 		breakpoints: {
+			301: {
+				slidesPerView: 1,
+			},
 			401: {
 				slidesPerView: 2,
 			},
@@ -237,48 +272,15 @@
 			})
 		}
 	})
-	const filterItems = document.querySelectorAll(
-		'.filter-list .filter_list_item'
-	)
+	document.addEventListener('DOMContentLoaded', () => {
+		const themeSwitcher = document.querySelector('.theme-mode')
 
-	filterItems.forEach(item => {
-		item.addEventListener('click', () => {
-			// Remove 'active' class from all filter items
-			filterItems.forEach(i => i.classList.remove('active'))
-			// Add 'active' class to the clicked item
-			item.classList.add('active')
-			const sortType = item.getAttribute('data-sort')
-			sortProductCards(sortType)
+		themeSwitcher.addEventListener('click', () => {
+			if (themeSwitcher.classList.contains('theme-mode--dark')) {
+				themeSwitcher.classList.remove('theme-mode--dark')
+			} else {
+				themeSwitcher.classList.add('theme-mode--dark')
+			}
 		})
 	})
-
-	function sortProductCards(sortType) {
-		const productList = document.querySelector('.product-cards-list')
-		const productItems = Array.from(
-			productList.querySelectorAll('.product-cards-list_item')
-		)
-
-		if (sortType === 'asc') {
-			productItems.sort(
-				(a, b) =>
-					parseFloat(a.getAttribute('data-price')) -
-					parseFloat(b.getAttribute('data-price'))
-			)
-		} else if (sortType === 'desc') {
-			productItems.sort(
-				(a, b) =>
-					parseFloat(b.getAttribute('data-price')) -
-					parseFloat(a.getAttribute('data-price'))
-			)
-		}
-		// Add additional sorting logic for 'stock' or 'sale' here if corresponding data attributes are available
-
-		// Reorder the DOM by appending sorted items
-		productItems.forEach(item => {
-			productList.appendChild(item)
-		})
-
-		// Update the Swiper instance
-		swiper.update()
-	}
 })()

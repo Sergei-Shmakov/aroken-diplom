@@ -65,14 +65,14 @@
 .language__list {
 	position: absolute;
 	pointer-events: none;
-	background: #111;
+	background: var(--general-text);
 	border-radius: 3px;
 	z-index: 11;
 	opacity: 0;
 	visibility: hidden;
 	transition: var(--transition);
 }
-.language__list--active{
+.language__list--active {
 	pointer-events: auto;
 	opacity: 1;
 	visibility: visible;
@@ -174,7 +174,6 @@
 	gap: 20px 20px;
 }
 .menu-nav__item {
-	c
 	display: flex;
 	gap: 15px;
 	justify-content: center;

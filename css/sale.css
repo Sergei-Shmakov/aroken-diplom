@@ -1,6 +1,6 @@
 .sale {
-	background: var(--general-text);
-	color: var(--dark-mode-text);
+	background: #111;
+	color: #fff;
 }
 .sale__inner {
 	display: flex;
@@ -41,7 +41,7 @@
 .sale h2 mark {
 	font-size: 64px;
 	font-family: 'namu-pro';
-	color: #4d57c8;
+	color: var(--blue-color);
 	background: var(--general-text);
 }
 .group-img {
@@ -67,7 +67,7 @@
 /* ================================================= */
 
 .airwrap {
-	background: #dedede;
+	background: var(--promo-bg);
 }
 .airwrap-group-text {
 	min-width: 50%;
@@ -92,10 +92,10 @@
 	line-height: 1.4;
 }
 .title__blue {
-	color: #4d57c8;
+	color: var(--blue-color);
 }
 .title__rose {
-	color: #cd8885;
+	color: var(--orange-color);
 }
 .airwrap__img {
 	position: relative;
